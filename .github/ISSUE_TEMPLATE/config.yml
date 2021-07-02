@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Support on Microsoft Teams
+    url: https://teams.microsoft.com/l/team/19%3aJ-3b5lqkAYPXvPKfEuoiThQqiZI49CSlh1SjgirfC8c1%40thread.tacv2/conversations?groupId=264ce572-6b2d-42d1-8850-8415504b1d2d&tenantId=935c6c4c-135c-4711-b2ee-8c362d3ee102
+    about: Get support, ask and answer questions in the dedicated team
+  - name: General feedback
+    url: https://forms.office.com/r/2sx7Vv6Xnh
+    about: Submit general feedback via the online form here
