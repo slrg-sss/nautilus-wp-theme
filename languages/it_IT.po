@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SLRG/SSS Theme\n"
+"POT-Creation-Date: 2021-07-28 16:25+0200\n"
+"PO-Revision-Date: 2021-07-28 16:33+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: 404.php:12
+msgid "Seite nicht gefunden [404]"
+msgstr "Pagina non trovata [404]"
+
+#: 404.php:14
+msgid ""
+"Es tut uns leid, aber die von Ihnen angeforderte Seite konnte nicht gefunden "
+"werden!"
+msgstr "Purtroppo la pagina richiesta non è stata trovata!"
+
+#: functions.php:25
+msgid "Primary Menu"
+msgstr "Menu principale"
+
+#: functions.php:26
+msgid "Meta Menu"
+msgstr "Meta Menù"
+
+#: functions.php:72
+msgid "Schwarz"
+msgstr "Nero"
+
+#: functions.php:77
+msgid "SLRG Blau"
+msgstr "SLRG Blu"
+
+#: functions.php:82
+msgid "SLRG Rot"
+msgstr "SLRG Rosso"
+
+#: functions.php:102
+msgid "Footer"
+msgstr "Piè di pagina"
+
+#: functions.php:103
+msgid "Adresse & Links der Sektionen"
+msgstr "Indirizzo & link delle sezioni"
+
+#: functions.php:107
+msgid "Adresse"
+msgstr "Indirizzo"
+
+#: functions.php:113
+msgid "Socialmedia Links"
+msgstr "Link ai social media"
+
+#: functions.php:119
+msgid "Impressum Link"
+msgstr "Link all’impronta"
+
+#: functions.php:125
+msgid "Copyright"
+msgstr "Copyright"
+
+#: functions.php:131
+msgid "Facebook"
+msgstr "Facebook"
+
+#: functions.php:136
+msgid "https://www.facebook.com/..."
+msgstr "https://www.facebook.com/..."
+
+#: functions.php:141
+msgid "Instagram"
+msgstr "Instagram"
+
+#: functions.php:146
+msgid "https://www.instagram.com/..."
+msgstr "https://www.instagram.com/..."
+
+#: functions.php:151
+msgid "Youtube"
+msgstr "Youtube"
+
+#: functions.php:156
+msgid "https://www.youtube.com/..."
+msgstr "https://www.youtube.com/..."
+
+#: functions.php:161
+msgid "Tiktok"
+msgstr "Tiktok"
+
+#: functions.php:166
+msgid "https://www.tiktok.com/..."
+msgstr "https://www.tiktok.com/..."
+
+#: functions.php:171
+msgid "SLRG Sektion XX"
+msgstr "Sezione SLRG XX"
+
+#: functions.php:176 functions.php:313
+msgid "Strasse"
+msgstr "Via"
+
+#: functions.php:181 functions.php:325
+msgid "Strasse 2"
+msgstr "Via 2"
+
+#: functions.php:186
+msgid "0000 Ort"
+msgstr "0000 Posizione"
+
+#: functions.php:191
+msgid "info@sektion.ch"
+msgstr "info@sektion.ch"
+
+#: functions.php:201
+msgid "© 2021 SLRG Sektion XX"
+msgstr "© 2021 SLRG Sezione XX"
+
+#: functions.php:209
+msgid "Social-Media-Plattform 01"
+msgstr "Piattaforma di social media 01"
+
+#: functions.php:232
+msgid "Social-Media-Plattform 02"
+msgstr "Piattaforma di social media 02"
+
+#: functions.php:255
+msgid "Social-Media-Plattform 03"
+msgstr "Piattaforma di social media 03"
+
+#: functions.php:278
+msgid "Social-Media-Plattform 04"
+msgstr "Piattaforma di social media 04"
+
+#: functions.php:301
+msgid "Sektion"
+msgstr "Section"
+
+#: functions.php:337
+msgid "Ort"
+msgstr "Città"
+
+#: functions.php:349
+msgid "E-Mail-Adresse"
+msgstr "Indirizzo e-mail"
+
+#: functions.php:361
+msgid "Impressum URL"
+msgstr "URL impronta"
+
+#: functions.php:373
+msgid "Copyright Text"
+msgstr "Testo copyright"
+
+#: functions.php:384
+msgid "Sprache"
+msgstr "Lingua"
+
+#: functions.php:385
+msgid "Wähle die Sprache deiner Sektionen"
+msgstr "Scegli la lingua delle tue sezioni"
+
+#: functions.php:389
+msgid "Sprache wählen"
+msgstr "Seleziona lingua"
+
+#: functions.php:402
+msgid "Wähle die Sprache:"
+msgstr "Selezionare la lingua:"
+
+#: functions.php:404
+msgid "Deutsch"
+msgstr "Tedesco"
+
+#: functions.php:405
+msgid "Français"
+msgstr "Francese"
+
+#: functions.php:406
+msgid "Italiano"
+msgstr "Italiano"
+
+#: header.php:50
+msgid "Menu"
+msgstr "Menù"
+
+#: index.php:24
+msgid "Komentar"
+msgstr "Commento"
+
+#: index.php:24 single.php:20
+msgid "1 Komentar"
+msgstr "1 commento"
+
+#: index.php:24 single.php:20
+msgid "% Kommentare"
+msgstr "% commenti"
+
+#: index.php:36 search.php:24
+msgid "weiterlesen"
+msgstr "continua a leggere"
+
+#: search.php:9
+msgid "Suchresultate"
+msgstr "Risultati della ricerca"
+
+#: search.php:10
+msgid "Es wurden"
+msgstr ""
+
+#: search.php:10
+msgid "Resultate zum Stichwort «"
+msgstr "Risultati trovati per parola chiave «"
+
+#: search.php:10
+msgid "» gefunden."
+msgstr "»."
+
+#: search.php:37
+msgid "Nicht das gefunden, nach dem du gesucht hast?"
+msgstr "Non hai trovato quello che stavi cercando?"
+
+#: search.php:38
+msgid "Nochmals suchen..."
+msgstr "Cerca di nuovo..."
+
+#: sidebar.php:3
+msgid "Archives"
+msgstr "Archivio"
+
+#: sidebar.php:10
+msgid "Meta"
+msgstr "Meta"
+
+#: single.php:20
+msgid "Kommentieren"
+msgstr "Commento"
+
+#. Theme Name of the plugin/theme
+msgid "SLRG/SSS Theme"
+msgstr "SLRG/SSS Theme"
+
+#. Description of the plugin/theme
+msgid ""
+"A customized Theme for SLRG, Switzerland. Based on «Naked Wordpress» form J "
+"Beckman."
+msgstr ""
+"Un tema personalizzato per SLRG, Svizzera. Basato su «Naked "
+"Wordpress» (formato J Beckman)."
+
+#. Author of the plugin/theme
+msgid "Reno Bertolotti, Pixelfarm"
+msgstr "Reno Bertolotti, Pixelfarm"
+
+#. Author URI of the plugin/theme
+msgid "https://pixelfarm.ch"
+msgstr "https://pixelfarm.ch"
+
+#. Template Name of the plugin/theme
+msgid "Sidebar"
+msgstr "Barra laterale"
+
+#. Template Name of the plugin/theme
+msgid "Home Page"
+msgstr "Pagina iniziale"
