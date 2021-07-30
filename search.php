@@ -21,7 +21,7 @@ global $wp_query;
                    <?php the_title();  ?>
                  </a></h3>
                  <?php echo substr(get_the_excerpt(), 0,240); ?>...
-                 <div class="h-readmore"> <a href="<?php the_permalink(); ?>"><button><?php esc_html_e( 'weiterlesen', 'slrg' ); ?></button></a></div>
+				 <div class="h-readmore"><div class="wp-block-button"><a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php esc_html_e( 'weiterlesen', 'slrg' ); ?></a></div></div>
                </li>
 
             <?php } ?>

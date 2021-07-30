@@ -124,6 +124,7 @@ html {
 ol,
 ul {
   list-style: none;
+  font-size: 17px;
 }
 
 blockquote,
@@ -148,7 +149,7 @@ code,
 kbd,
 tt,
 var {
-  font: 15px Arial, Helvetica, sans-serif;
+  font: 15px SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 abbr,
@@ -209,6 +210,9 @@ input {
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   border: none;
   border-radius: 0px;
   background-color: #ececec;
@@ -221,6 +225,7 @@ input[type="submit"] {
   padding-right: 15px;
   margin-top: 0px;
   margin-left: 10px;
+ 
 }
 
 .wp-block-button:hover, button:hover,
@@ -280,6 +285,9 @@ input::-moz-focus-inner {
 input[type=text],
 input[type=email],
 textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
   color: #888888;
   border: 1px solid #dddddd;
   border-radius: 0px;
@@ -327,10 +335,7 @@ button, .wp-block-button, .wp-block-post-excerpt__more-text{
   cursor: pointer;
   font-size: 16px;
   line-height: 1;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 20px;
+  margin-top: 5px;
   display: inline-block;
 }
 
@@ -342,6 +347,17 @@ button a, .wp-block-button a, .wp-block-post-excerpt__more-text a{
 button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover, .wp-block-post-excerpt__more-text:hover a{
   background-color: #375B9B;
   color: #fff !important;
+  font-size: 17px;
+}
+
+.wp-block-post-excerpt__more-text{
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.wp-block-button__link{
+	font-size: 17px !important;
 }
 
 /* typography
@@ -422,10 +438,11 @@ p {
   	-webkit-hyphens: auto;
   	-ms-hyphens: auto;
   	hyphens: auto;
+	padding-bottom: 0.5em;
 }
 ul,
 ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 0.5em 1.5em;
 }
 ul {
   list-style: disc;
@@ -453,7 +470,9 @@ strong {
 }
 dfn,
 cite{
-  font-style: normal;
+  font-style: italic;
+  font-size: 17px;
+  color: #375B9B;
 }
 
 em, i{
@@ -543,7 +562,12 @@ a:active {
 }
 
 /* Colors */
-.has-slrg-schwarz-background-color {
+
+.has-slrg-bg-schwarz-color {
+    color: #ececec;
+}
+
+.has-slrg-bg-schwarz-background-color {
     background-color: #ececec;
 }
 
@@ -551,7 +575,15 @@ a:active {
     color: #191919;
 }
 
-.has-slrg-blau-background-color {
+.has-slrg-schwarz-background-color {
+    color: #191919;
+}
+
+.has-slrg-bg-blau-color {
+    background-color: #d2ddef;
+}
+
+.has-slrg-bg-blau-background-color {
     background-color: #d2ddef;
 }
 
@@ -559,7 +591,15 @@ a:active {
     color: #375B9B;
 }
 
-.has-slrg-rot-background-color {
+.has-slrg-blau-background-color {
+    color: #375B9B;
+}
+
+.has-slrg-bg-rot-color {
+    background-color: #f4d3d3;
+}
+
+.has-slrg-bg-rot-background-color {
     background-color: #f4d3d3;
 }
 
@@ -567,10 +607,14 @@ a:active {
     color: #C02F2E;
 }
 
+.has-slrg-rot-background-color {
+    color: #C02F2E;
+}
+
 
 table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0.5em;
 }
 
 table > thead > tr > th,
@@ -587,7 +631,7 @@ table > thead > tr > th, table > thead > tr > td {
 }
 
 th {
-  font-weight: bold;
+  font-weight: bold;$
 }
 
 .is-style-stripes table > thead > tr > th{
@@ -680,7 +724,7 @@ header #metaNav ul li:first-of-type:after{
 #sidebar ul li{
 	width: 100%;
 	float: left;
-	margin-left: 14px;
+	margin-left: 18px;
 	margin-top: 5px;
 }
 
@@ -691,7 +735,7 @@ header #metaNav ul li:first-of-type:after{
 #sidebar ul ul li{
 	width: 100%;
 	float: left;
-	margin-left: 11px;
+	margin-left: 15px;
 	margin-top: 1px;
 }
 
@@ -702,8 +746,13 @@ header #metaNav ul li:first-of-type:after{
 #sidebar ul ul ul li{
 	width: 100%;
 	float: left;
-	margin-left: 8px;
+	margin-left: 12px;
 	margin-top: -1px;
+	font-style: italic;
+}
+
+#sidebar a{
+	text-decoration: none;
 }
 
 .search-header{
@@ -793,6 +842,7 @@ header #metaNav ul li:first-of-type:after{
 	color: #C02F2E;
 }
 
+
 article ul {
   list-style-type: none;
 }
@@ -800,8 +850,14 @@ article ul {
 article ul li:before {
   content: "– ";
   margin-left: -25px;
+  margin-right: 2px;
 }
 
+.blocks-gallery-grid li:before {
+  content: "";
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
 /* Menu
 -------------------------------------------------------------- */
@@ -1062,8 +1118,17 @@ article .post-meta-right .post-categories {
 }
 article .post-meta-right .post-categories li {
   display: inline-block;
-  margin-right: 10px;
+  font-size: 14px;
 }
+
+article .post-meta-right .post-categories li:after {
+	content: ", ";
+}
+
+article .post-meta-right .post-categories li:last-child:after {
+	content: "";
+}
+
 article .post-meta-right .post-categories li:before {
   content: "";
   margin-left: 0px;
@@ -1071,6 +1136,10 @@ article .post-meta-right .post-categories li:before {
 .wp-block-image img{
 	max-width: 100%;
 	height: auto;
+}
+
+.wp-block-image{
+	margin-bottom: 0.5em;
 }
 
 /* Page loop styling */
@@ -1107,15 +1176,18 @@ h3#comments {
   margin: 0;
 }
 .commentlist .comment {
-  margin: 0 0 40px 50px;
-  padding: 20px;
+  margin: 0 0 20px 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
   list-style: none;
   background-color: #d2ddef;
 
 }
 .commentlist .comment .children {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .commentlist .comment-author {
   float: left;
@@ -1124,7 +1196,7 @@ h3#comments {
 .commentlist .comment-author img {
   position: absolute;
   left: -50px;
-  top: 5px;
+  top: 15px;
 }
 .commentlist .comment-author .says {
   display: none;
@@ -1201,6 +1273,15 @@ h3#comments {
 /* Misc & mixens
 -------------------------------------------------------------- */
 
+#content{
+	height: auto;
+	min-height: calc(100vh - 286px);
+}
+
+.h-readmore .wp-block-button{
+	margin-left: 0px;
+	margin-top: 10px;
+}
 /* Footer */
 
 .site-footer{
@@ -1395,7 +1476,6 @@ html[xmlns] .clearfix {
 	margin: auto;
 	width: 50%;
 	text-align: center;
-	min-height: calc(100vh - 380px);
 }
 
 .error-404 h1{
@@ -1442,7 +1522,7 @@ html[xmlns] .clearfix {
 	  .nav-menu.nav-menu-mobile {
 		display: block !important;
 		position: absolute;
-		top: 427px;
+		top: calc(7vw + 412px);
 		right: 0;
 		width: 100%;
 		background: transparent;
@@ -1542,6 +1622,9 @@ html[xmlns] .clearfix {
   /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
   @media only screen and (max-width: 479px) {
     
+	 .nav-menu.nav-menu-mobile {
+		top: 427px;
+	  }
 	  
 	.main-fluid{
 		padding-left: 20px;

@@ -1,11 +1,15 @@
 <?php get_header(); ?>
-	<div id="primary" class="row-fluid sidebarPage">
+	<div id="primary" class="row-fluid sidebarPage haloWelt">
 		<div id="sidebar" role="sidebar" class="sidebarLeft">
 			<?php get_sidebar(); ?>
 		</div>
 		<div id="content" role="main" class="sidebarRight">
 
 			<?php if ( have_posts() ) : ?>
+			
+				<header class="archive-header">
+					<h2 class="archive-title"><?php single_cat_title( '', true ); ?></h2>
+			   </header>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 

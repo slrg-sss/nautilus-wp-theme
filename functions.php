@@ -64,30 +64,45 @@ function custom_logo_setup() {
  
 add_action( 'after_setup_theme', 'custom_logo_setup' );
 
-function wpdc_add_custom_gutenberg_color_palette() {
+function slrg_add_custom_gutenberg_color_palette() {
 	add_theme_support(
 		'editor-color-palette',
 		[
 			[
-				'name'  => esc_html__( 'Schwarz', 'wpdc' ),
+				'name'  => esc_html__( 'Schwarz', 'slrg' ),
 				'slug'  => 'SLRG-Schwarz',
 				'color' => '#191919',
 			],
 			[
-				'name'  => esc_html__( 'SLRG Blau', 'wpdc' ),
+				'name'  => esc_html__( 'SLRG Blau', 'slrg' ),
 				'slug'  => 'SLRG-Blau',
 				'color' => '#004fab',
 			],
 			[
-				'name'  => esc_html__( 'SLRG Rot', 'wpdc' ),
+				'name'  => esc_html__( 'SLRG Rot', 'slrg' ),
 				'slug'  => 'SLRG-Rot',
 				'color' => '#EA0A0A',
+			],
+			[
+				'name'  => esc_html__( 'BG Schwarz', 'slrg' ),
+				'slug'  => 'SLRG-BG-Schwarz',
+				'color' => '#ececec',
+			],
+			[
+				'name'  => esc_html__( 'SLRG BG Blau', 'slrg' ),
+				'slug'  => 'SLRG-BG-Blau',
+				'color' => '#d2ddef',
+			],
+			[
+				'name'  => esc_html__( 'SLRG BG Rot', 'slrg' ),
+				'slug'  => 'SLRG-BG-Rot',
+				'color' => '#f4d3d3',
 			],
 
 		]
 	);
 }
-add_action( 'after_setup_theme', 'wpdc_add_custom_gutenberg_color_palette' );
+add_action( 'after_setup_theme', 'slrg_add_custom_gutenberg_color_palette' );
 
 
 /*-----------------------------------------------------------------------------------*/
