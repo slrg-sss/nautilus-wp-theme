@@ -17,13 +17,22 @@
 							<?php the_time('j. F Y'); ?> 
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
-									 | <?php comments_popup_link( __( 'Kommentieren', 'slrg' ), __( '1 Komentar', 'slrg' ), __( '% Kommentare', 'slrg' ) ); 
+									 | <?php comments_popup_link( __( 'Kommentieren', 'slrg' ), __( '1 Kommentar', 'slrg' ), __( '% Kommentare', 'slrg' ) ); 
 									?>
 								</span>
 							<?php endif; ?>
 						</div>
 						<div class="post-meta-right">
-							<div class="category"><h5>Kategorie:</h5><?php echo get_the_category_list(); ?></div>
+							<div class="category"><h5>
+								<?php 
+								$anzahl = get_the_category(); 
+								if(count($anzahl) == 1){
+									echo (esc_html_e( 'Kategorie', 'slrg' ));
+								}else{
+									echo (esc_html_e( 'Kategorien', 'slrg' ));
+								}
+								?>:</h5><?php echo get_the_category_list(); ?>
+							</div>
 						</div>
 						</div>
 						
@@ -45,7 +54,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing has been posted like that yet</h1>
+					<h1 class="404"><?php esc_html_e( 'Keine News vorhanden', 'slrg' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
