@@ -46,7 +46,7 @@ get_header(); ?>
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing has been posted like that yet</h1>
+					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg' ); ?></h1>
 				</article>
 
 			<?php endif; ?>

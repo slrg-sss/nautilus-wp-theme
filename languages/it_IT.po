@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLRG/SSS Theme\n"
-"POT-Creation-Date: 2021-07-28 16:25+0200\n"
-"PO-Revision-Date: 2021-07-28 16:33+0200\n"
+"POT-Creation-Date: 2021-08-04 17:13+0200\n"
+"PO-Revision-Date: 2021-08-04 17:14+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -31,6 +31,50 @@ msgid ""
 "werden!"
 msgstr "Purtroppo la pagina richiesta non è stata trovata!"
 
+#: category.php:28 index.php:28 single.php:20
+msgid "Jetzt kommentieren!"
+msgstr "Commenta ora!"
+
+#: category.php:28 index.php:28 single.php:20
+msgid "1 Kommentar"
+msgstr "1 commento"
+
+#: category.php:28 index.php:28 single.php:20
+msgid "% Kommentare"
+msgstr "% commenti"
+
+#: category.php:38 index.php:38 single.php:30
+msgid "Kategorie"
+msgstr ""
+
+#: category.php:40 index.php:40 single.php:32
+msgid "Kategorien"
+msgstr ""
+
+#: category.php:49 index.php:49 search.php:24
+msgid "weiterlesen"
+msgstr "continua a leggere"
+
+#: category.php:65 index.php:65 page-sidebar.php:49 single.php:57
+msgid "Keine Mitteilung vorhanden"
+msgstr ""
+
+#: footer.php:13
+msgid "SLRG Logo ohne Titel"
+msgstr ""
+
+#: footer.php:68
+msgid "SLRG Schweiz"
+msgstr ""
+
+#: footer.php:71
+msgid "Impressum"
+msgstr "Impronta"
+
+#: footer.php:74
+msgid "Organisation des SRK"
+msgstr ""
+
 #: functions.php:25
 msgid "Primary Menu"
 msgstr "Menu principale"
@@ -39,181 +83,165 @@ msgstr "Menu principale"
 msgid "Meta Menu"
 msgstr "Meta Menù"
 
-#: functions.php:72
+#: functions.php:45
+msgid "News Sidebar"
+msgstr "News Sidebar"
+
+#: functions.php:47
+msgid "Custom widget area for the News-Page"
+msgstr ""
+
+#: functions.php:80
 msgid "Schwarz"
 msgstr "Nero"
 
-#: functions.php:77
+#: functions.php:85
 msgid "SLRG Blau"
 msgstr "SLRG Blu"
 
-#: functions.php:82
+#: functions.php:90
 msgid "SLRG Rot"
 msgstr "SLRG Rosso"
 
-#: functions.php:102
+#: functions.php:95
+msgid "BG Schwarz"
+msgstr "BG Nero"
+
+#: functions.php:100
+msgid "SLRG BG Blau"
+msgstr "SLRG BG Blu"
+
+#: functions.php:105
+msgid "SLRG BG Rot"
+msgstr "SLRG BG Rosso"
+
+#: functions.php:125
 msgid "Footer"
 msgstr "Piè di pagina"
 
-#: functions.php:103
+#: functions.php:126
 msgid "Adresse & Links der Sektionen"
 msgstr "Indirizzo & link delle sezioni"
 
-#: functions.php:107
+#: functions.php:130
 msgid "Adresse"
 msgstr "Indirizzo"
 
-#: functions.php:113
+#: functions.php:136
 msgid "Socialmedia Links"
 msgstr "Link ai social media"
 
-#: functions.php:119
+#: functions.php:142
 msgid "Impressum Link"
 msgstr "Link all’impronta"
 
-#: functions.php:125
+#: functions.php:148
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions.php:131
-msgid "Facebook"
-msgstr "Facebook"
-
-#: functions.php:136
-msgid "https://www.facebook.com/..."
-msgstr "https://www.facebook.com/..."
-
-#: functions.php:141
-msgid "Instagram"
-msgstr "Instagram"
-
-#: functions.php:146
-msgid "https://www.instagram.com/..."
-msgstr "https://www.instagram.com/..."
-
-#: functions.php:151
-msgid "Youtube"
-msgstr "Youtube"
-
-#: functions.php:156
-msgid "https://www.youtube.com/..."
-msgstr "https://www.youtube.com/..."
-
-#: functions.php:161
-msgid "Tiktok"
-msgstr "Tiktok"
-
-#: functions.php:166
-msgid "https://www.tiktok.com/..."
-msgstr "https://www.tiktok.com/..."
-
-#: functions.php:171
-msgid "SLRG Sektion XX"
-msgstr "Sezione SLRG XX"
-
-#: functions.php:176 functions.php:313
-msgid "Strasse"
-msgstr "Via"
-
-#: functions.php:181 functions.php:325
-msgid "Strasse 2"
-msgstr "Via 2"
-
-#: functions.php:186
-msgid "0000 Ort"
-msgstr "0000 Posizione"
-
-#: functions.php:191
-msgid "info@sektion.ch"
-msgstr "info@sektion.ch"
-
-#: functions.php:201
-msgid "© 2021 SLRG Sektion XX"
-msgstr "© 2021 SLRG Sezione XX"
-
-#: functions.php:209
+#: functions.php:217
 msgid "Social-Media-Plattform 01"
 msgstr "Piattaforma di social media 01"
 
-#: functions.php:232
+#: functions.php:222
+msgid "z.B. Facebook"
+msgstr "Facebook"
+
+#: functions.php:236
+msgid "https://www.facebook.com/..."
+msgstr "https://www.facebook.com/..."
+
+#: functions.php:246
 msgid "Social-Media-Plattform 02"
 msgstr "Piattaforma di social media 02"
 
-#: functions.php:255
+#: functions.php:251
+msgid "z.B. Instagram"
+msgstr "Instagram"
+
+#: functions.php:265
+msgid "https://www.instagram.com/..."
+msgstr "https://www.instagram.com/..."
+
+#: functions.php:275
 msgid "Social-Media-Plattform 03"
 msgstr "Piattaforma di social media 03"
 
-#: functions.php:278
+#: functions.php:280
+msgid "z.B. Youtube"
+msgstr "Youtube"
+
+#: functions.php:294
+msgid "https://www.youtube.com/..."
+msgstr "https://www.youtube.com/..."
+
+#: functions.php:304
 msgid "Social-Media-Plattform 04"
 msgstr "Piattaforma di social media 04"
 
-#: functions.php:301
+#: functions.php:309
+msgid "z.B. Tiktok"
+msgstr "Tiktok"
+
+#: functions.php:323
+msgid "https://www.tiktok.com/..."
+msgstr "https://www.tiktok.com/..."
+
+#: functions.php:333
 msgid "Sektion"
 msgstr "Section"
 
-#: functions.php:337
+#: functions.php:338
+msgid "SLRG Sektion XX"
+msgstr "Sezione SLRG XX"
+
+#: functions.php:348 functions.php:353
+msgid "Strasse"
+msgstr "Via"
+
+#: functions.php:363 functions.php:368
+msgid "Strasse 2"
+msgstr "Via 2"
+
+#: functions.php:378
 msgid "Ort"
 msgstr "Città"
 
-#: functions.php:349
+#: functions.php:383
+msgid "0000 Ort"
+msgstr "0000 Posizione"
+
+#: functions.php:393
 msgid "E-Mail-Adresse"
 msgstr "Indirizzo e-mail"
 
-#: functions.php:361
+#: functions.php:398
+msgid "info@sektion.ch"
+msgstr "info@sektion.ch"
+
+#: functions.php:408
 msgid "Impressum URL"
 msgstr "URL impronta"
 
-#: functions.php:373
+#: functions.php:420
 msgid "Copyright Text"
 msgstr "Testo copyright"
 
-#: functions.php:384
-msgid "Sprache"
-msgstr "Lingua"
-
-#: functions.php:385
-msgid "Wähle die Sprache deiner Sektionen"
-msgstr "Scegli la lingua delle tue sezioni"
-
-#: functions.php:389
-msgid "Sprache wählen"
-msgstr "Seleziona lingua"
-
-#: functions.php:402
-msgid "Wähle die Sprache:"
-msgstr "Selezionare la lingua:"
-
-#: functions.php:404
-msgid "Deutsch"
-msgstr "Tedesco"
-
-#: functions.php:405
-msgid "Français"
-msgstr "Francese"
-
-#: functions.php:406
-msgid "Italiano"
-msgstr "Italiano"
+#: functions.php:425
+msgid "© 2021 SLRG Sektion XX"
+msgstr "© 2021 SLRG Sezione XX"
 
 #: header.php:50
+msgid "SLRG SSS Ihre Rettungsschwimmer"
+msgstr ""
+
+#: header.php:58
 msgid "Menu"
 msgstr "Menù"
 
-#: index.php:24
-msgid "Komentar"
-msgstr "Commento"
-
-#: index.php:24 single.php:20
-msgid "1 Komentar"
-msgstr "1 commento"
-
-#: index.php:24 single.php:20
-msgid "% Kommentare"
-msgstr "% commenti"
-
-#: index.php:36 search.php:24
-msgid "weiterlesen"
-msgstr "continua a leggere"
+#: page-home.php:33 page.php:48
+msgid "Kein Inhalt vorhanden"
+msgstr ""
 
 #: search.php:9
 msgid "Suchresultate"
@@ -247,10 +275,6 @@ msgstr "Archivio"
 msgid "Meta"
 msgstr "Meta"
 
-#: single.php:20
-msgid "Kommentieren"
-msgstr "Commento"
-
 #. Theme Name of the plugin/theme
 msgid "SLRG/SSS Theme"
 msgstr "SLRG/SSS Theme"
@@ -278,3 +302,27 @@ msgstr "Barra laterale"
 #. Template Name of the plugin/theme
 msgid "Home Page"
 msgstr "Pagina iniziale"
+
+#~ msgid "Sprache"
+#~ msgstr "Lingua"
+
+#~ msgid "Wähle die Sprache deiner Sektionen"
+#~ msgstr "Scegli la lingua delle tue sezioni"
+
+#~ msgid "Sprache wählen"
+#~ msgstr "Seleziona lingua"
+
+#~ msgid "Wähle die Sprache:"
+#~ msgstr "Selezionare la lingua:"
+
+#~ msgid "Deutsch"
+#~ msgstr "Tedesco"
+
+#~ msgid "Français"
+#~ msgstr "Francese"
+
+#~ msgid "Italiano"
+#~ msgstr "Italiano"
+
+#~ msgid "Komentar"
+#~ msgstr "Commento"

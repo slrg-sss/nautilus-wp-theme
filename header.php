@@ -1,3 +1,11 @@
+<?php 
+
+	$actLang = substr( get_bloginfo ( 'language' ), 0, 2 );
+	if( $actLang != "de" && $actLang != "fr" && $actLang != "it"){
+		$actLang = "de";
+	}
+?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -39,7 +47,7 @@
 			if(get_theme_mod( 'custom_logo' )){
 
 			}else{
-				echo("<a href=\"".esc_url( home_url( '/' ) )."\" title=\"".esc_attr( get_bloginfo( 'name', 'display' ) )."\" rel=\"home\"><img width=\"600\" height=\"180\" src=\"".get_template_directory_uri()."/assets/images/SLRG-Logo_".get_theme_mod( 'slrg_radio_setting_id').".png\" class=\"custom-logo\" alt=\"SLRG\"></a>");
+				echo("<a href=\"".esc_url( home_url( '/' ) )."\" title=\"".esc_attr( get_bloginfo( 'name', 'display' ) )."\" rel=\"home\"><img width=\"600\" height=\"180\" src=\"".get_template_directory_uri()."/assets/images/SLRG-Logo_".$actLang.".png\" class=\"custom-logo\" alt=\"".__( 'SLRG SSS Ihre Rettungsschwimmer', 'slrg' )."\"></a>");
 			}
 
 		}
@@ -53,7 +61,6 @@
 					<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => '', 'items_wrap' => '%3$s')); ?>
 				</ul>
 			</nav>
-			<!-- #site-navigation -->
 	</div>
 		
 

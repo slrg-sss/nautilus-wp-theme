@@ -6,7 +6,7 @@
 get_header(); ?>
 
 	<div id="primary" class="row-fluid">
-		<div id="content" role="main" class="span8 offset2">
+		<div id="content" role="main">
 
 			<section class="error-404 not-found">
 				<h1 class="404"><?php esc_html_e( 'Seite nicht gefunden [404]', 'slrg' ); ?></h1>

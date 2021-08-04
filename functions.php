@@ -41,9 +41,17 @@ function slrg_register_sidebars() {
 		'after_title' => '</h3>',
 		'empty_title'=> '',
 	));
+	register_sidebar( array(
+		'name' => __( 'News Sidebar', 'slrg' ),
+		'id' => 'sidebar-custom-header',
+		'description' => __( 'Custom widget area for the News-Page', 'slrg' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
 } 
 add_action( 'widgets_init', 'slrg_register_sidebars' );
-
 
 load_theme_textdomain('slrg', get_template_directory() . '/languages' );
 
@@ -143,77 +151,62 @@ function slrg_register_theme_customizer( $wp_customize ) {
     ) );
 	
 	$wp_customize->add_setting( 'text_block_social_01', array(
-         'default'           => __( 'Facebook', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'url_block_social_01', array(
-         'default'           => __( 'https://www.facebook.com/...', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_social_02', array(
-         'default'           => __( 'Instagram', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'url_block_social_02', array(
-         'default'           => __( 'https://www.instagram.com/...', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_social_03', array(
-         'default'           => __( 'Youtube', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'url_block_social_03', array(
-         'default'           => __( 'https://www.youtube.com/...', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_social_04', array(
-         'default'           => __( 'Tiktok', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'url_block_social_04', array(
-         'default'           => __( 'https://www.tiktok.com/...', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_section', array(
-         'default'           => __( 'SLRG Sektion XX', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 
     $wp_customize->add_setting( 'text_block_street', array(
-         'default'           => __( 'Strasse', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	 $wp_customize->add_setting( 'text_block_street_02', array(
-         'default'           => __( 'Strasse 2', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_location', array(
-         'default'           => __( '0000 Ort', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_email', array(
-         'default'           => __( 'info@sektion.ch', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_impressum', array(
-         'default'           => __( '', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
 	$wp_customize->add_setting( 'text_block_copyright', array(
-         'default'           => __( '© 2021 SLRG Sektion XX', 'slrg' ),
          'sanitize_callback' => 'sanitize_text'
     ) );
 	
@@ -224,7 +217,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Social-Media-Plattform 01', 'slrg' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_01',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'z.B. Facebook', 'slrg' ),
+				)
             )
         )
     );
@@ -235,7 +231,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
             array(
                 'section'  => 'social_text',
                 'settings' => 'url_block_social_01',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'https://www.facebook.com/...', 'slrg' ),
+				)
             )
         )
     );
@@ -247,7 +246,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Social-Media-Plattform 02', 'slrg' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_02',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'z.B. Instagram', 'slrg' ),
+				)
             )
         )
     );
@@ -258,7 +260,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
             array(
                 'section'  => 'social_text',
                 'settings' => 'url_block_social_02',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'https://www.instagram.com/...', 'slrg' ),
+				)
             )
         )
     );
@@ -270,7 +275,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Social-Media-Plattform 03', 'slrg' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_03',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'z.B. Youtube', 'slrg' ),
+				)
             )
         )
     );
@@ -281,7 +289,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
             array(
                 'section'  => 'social_text',
                 'settings' => 'url_block_social_03',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'https://www.youtube.com/...', 'slrg' ),
+				)
             )
         )
     );
@@ -293,7 +304,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Social-Media-Plattform 04', 'slrg' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_04',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'z.B. Tiktok', 'slrg' ),
+				)
             )
         )
     );
@@ -304,7 +318,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
             array(
                 'section'  => 'social_text',
                 'settings' => 'url_block_social_04',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'https://www.tiktok.com/...', 'slrg' ),
+				)
             )
         )
     );
@@ -316,7 +333,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Sektion', 'slrg' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_section',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'SLRG Sektion XX', 'slrg' ),
+				)
             )
         )
     );
@@ -328,7 +348,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Strasse', 'slrg' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_street',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'Strasse', 'slrg' ),
+				)
             )
         )
     );
@@ -340,7 +363,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Strasse 2', 'slrg' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_street_02',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'Strasse 2', 'slrg' ),
+				)
             )
         )
     );
@@ -352,7 +378,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Ort', 'slrg' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_location',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( '0000 Ort', 'slrg' ),
+				)
             )
         )
     );
@@ -364,7 +393,10 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'E-Mail-Adresse', 'slrg' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_email',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( 'info@sektion.ch', 'slrg' ),
+				)
             )
         )
     );
@@ -388,39 +420,13 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'label'    => __( 'Copyright Text', 'slrg' ),
                 'section'  => 'copyright_text',
                 'settings' => 'text_block_copyright',
-                'type'     => 'text'
+                'type'     => 'text',
+				'input_attrs' => array(
+					'placeholder' => __( '© 2021 SLRG Sektion XX', 'slrg' ),
+				)
             )
         )
     );
-	
-	$wp_customize->add_panel( 'lang_text_block', array(
-        'priority'       => 60,
-        'theme_supports' => '',
-        'title'          => __( 'Sprache', 'slrg' ),
-        'description'    => __( 'Wähle die Sprache deiner Sektionen', 'slrg' ),
-    ) );
-	
-	$wp_customize->add_section( 'Sprache_text' , array(
-        'title'    => __('Sprache wählen','slrg'),
-        'panel'    => 'lang_text_block',
-        'priority' => 10
-    ) );
-
-	$wp_customize->add_setting( 'slrg_radio_setting_id', array(
-		'capability' => 'edit_theme_options',
-		'default' => 'blue',
-		'sanitize_callback' => 'slrg_customizer_sanitize_radio',
-	) );
-	$wp_customize->add_control( 'slrg_radio_setting_id', array(
-		'type' => 'radio',
-		'section' => 'Sprache_text',
-		'label' => __( 'Wähle die Sprache:' ),
-		'choices' => array(
-			'de' => __( 'Deutsch' ),
-			'fr' => __( 'Français' ),
-			'it' => __( 'Italiano' ),
-		),
-	) );
 	
   
     // Sanitize text

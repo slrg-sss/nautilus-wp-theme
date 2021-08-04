@@ -4,7 +4,7 @@
 */ 
 get_header(); ?>
 
-	<div id="primary" class="row-fluid halloWelt2">
+	<div id="primary" class="row-fluid">
 		<div id="content" role="main">
 			<?php if ( have_posts() ) : ?>
 
@@ -30,7 +30,7 @@ get_header(); ?>
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing has been posted like that yet</h1>
+					<h1 class="404"><?php esc_html_e( 'Kein Inhalt vorhanden', 'slrg' ); ?></h1>
 				</article>
 
 			<?php endif; ?>

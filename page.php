@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
+					<h1 class="404"><?php esc_html_e( 'Kein Inhalt vorhanden', 'slrg' ); ?></h1>
 				</article>
 
 			<?php endif; ?>

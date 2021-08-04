@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 	<div id="primary" class="row-fluid sidebarPage">
-		<div id="sidebar" role="sidebar" class="sidebarLeft">
-			<?php get_sidebar(); ?>
+		<div id="sidebar" role="sidebar" class="sidebarLeft">			
+			<?php if ( is_active_sidebar( 'sidebar-custom-header' ) ) : ?>
+			<div id="sidebar-header">
+			<?php dynamic_sidebar( 'sidebar-custom-header' ); ?>
+			</div>
+			<?php endif; ?>
 		</div>
 		<div id="content" role="main" class="sidebarRight">
 
@@ -21,7 +25,7 @@
 							<?php the_time('j. F Y'); ?> 
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
-									 | <?php comments_popup_link( __( 'Kommentar', 'slrg' ), __( '1 Kommentar', 'slrg' ), __( '% Kommentare', 'slrg' ) ); 
+									 | <?php comments_popup_link( __( 'Jetzt kommentieren!', 'slrg' ), __( '1 Kommentar', 'slrg' ), __( '% Kommentare', 'slrg' ) ); 
 									?>
 								</span>
 							<?php endif; ?>
@@ -58,7 +62,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Keine News vorhanden', 'slrg' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
