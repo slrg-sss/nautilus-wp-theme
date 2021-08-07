@@ -1,21 +1,25 @@
 # Development Environment
 
-*If not otherwise stated, the commands need to be executed in the `dev` directory.*
+
+## Notes
+* Docker and Docker-Compose need to be installed.
+* If not otherwise stated, the commands need to be executed in the `dev` directory.
+* The WordPress installation can be reached at [`localhost:8585`](http://localhost:8585)
 
 
 ## Docker
-Start services (WordPress and database):
-```
+Start services:
+```bash
 docker-compose up -d
 ```
 
 Stop services:
-```
+```bash
 docker-compose stop
 ```
 
-Stop and remove containers as well as volumes:
-```
+Stop and remove containers as well as volumes (database):
+```bash
 docker-compose down --volumes
 ```
 
@@ -34,22 +38,21 @@ Builds the ZIP for distribution with an overridden version:
 ```
 
 
-### `cli-core-install`
-Executes the "WordPress 5-minute installation" within some seconds.
-```bash
-./cli-core-install.sh
-```
+### `local-install`
+Prepares basic installation by executing the "WordPress 5-minute installation",
+installs and activates some plugins, builds and activates the theme.
 
 
-### `local-deploy-theme`
-Build and move the new version of theme into the local WordPress deployment:
-```
-./local-deploy-theme.sh
-````
+### `local-clean`
+Stops and removes containers, the database volume and the local WordPress directory (`./wp`).
+
+
+### `local-deploy`
+Build and move the new version of theme into the local WordPress deployment.
 
 
 ### `wp-cli`
-Abstracts calls to the dockerized WP-CLI.
+Execute commands in dockerized WP-CLI:
 ```bash
 ./wp-cli.sh wp option update time_format "G:i"
 ```
@@ -60,6 +63,6 @@ Abstracts calls to the dockerized WP-CLI.
 
 ```bash
 ./wp-cli.sh bash -c \
-  'wp option update date_format "j. F Y" &&
+ 'wp option update date_format "j. F Y" &&
   wp option update time_format "G:i"'
 ```

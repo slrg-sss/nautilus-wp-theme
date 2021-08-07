@@ -12,7 +12,7 @@ if [[ -n "$1" ]]; then
   # check format of version (must be x.x.x)
   if ! [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "Error: Version does not match the required pattern (x.x.x)"
-    exit 1;
+    exit 1
   fi
   VERSION_OVERRIDE="$1"
 fi
