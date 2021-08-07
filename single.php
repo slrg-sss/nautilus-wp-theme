@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 	<div id="primary" class="row-fluid sidebarPage">
 		<div id="sidebar" role="sidebar" class="sidebarLeft">
-			<?php get_sidebar(); ?>
+			<?php if ( is_active_sidebar( 'sidebar-custom-header' ) ) : ?>
+			<div id="sidebar-header">
+			<?php dynamic_sidebar( 'sidebar-custom-header' ); ?>
+			</div>
+			<?php endif; ?>
 		</div>
 		<div id="content" role="main" class="sidebarRight">
 

@@ -22,8 +22,8 @@ add_theme_support( 'post-thumbnails' );
 /*-----------------------------------------------------------------------------------*/
 register_nav_menus( 
 	array(
-		'primary'	=>	__( 'Primary Menu', 'slrg' ), 
-		'meta'	=>	__( 'Meta Menu', 'slrg' ),
+		'primary'	=>	__( 'Hauptmenü', 'slrg' ), 
+		'meta'	=>	__( 'Meta-Navigation', 'slrg' ),
 	)
 );
 
@@ -42,9 +42,9 @@ function slrg_register_sidebars() {
 		'empty_title'=> '',
 	));
 	register_sidebar( array(
-		'name' => __( 'News Sidebar', 'slrg' ),
+		'name' => __( 'Sidebar Beiträge', 'slrg' ),
 		'id' => 'sidebar-custom-header',
-		'description' => __( 'Custom widget area for the News-Page', 'slrg' ),
+		'description' => __( 'Bereich für Widget in der Sidebar für Beiträge', 'slrg' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -53,7 +53,15 @@ function slrg_register_sidebars() {
 } 
 add_action( 'widgets_init', 'slrg_register_sidebars' );
 
+/*-----------------------------------------------------------------------------------*/
+/* Load translation
+/*-----------------------------------------------------------------------------------*/
 load_theme_textdomain('slrg', get_template_directory() . '/languages' );
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Custom-Logo
+/*-----------------------------------------------------------------------------------*/
 
 add_theme_support( 'custom-logo' );
 
@@ -71,6 +79,10 @@ function custom_logo_setup() {
 }
  
 add_action( 'after_setup_theme', 'custom_logo_setup' );
+
+/*-----------------------------------------------------------------------------------*/
+/* Gutenberg Color-palette
+/*-----------------------------------------------------------------------------------*/
 
 function slrg_add_custom_gutenberg_color_palette() {
 	add_theme_support(
@@ -467,11 +479,11 @@ add_action( 'add_meta_boxes', 'slrg_add_custom_box' );
 function slrg_custom_box_html( $post ) {
     $value = get_post_meta( $post->ID, '_slrg_meta_key', true );
     ?>
-    <label for="slrg_field">Gewünschter Header anzeigen</label>
+    <label for="slrg_field"><?php print( __( 'Gewünschter Header anzeigen', 'slrg' )); ?></label>
     <select name="slrg_field" id="slrg_field" class="postbox" style="min-width: 150px; border: 1px solid #777; margin-top: 8px;">
-        <option value="1" <?php selected( $value, '1' ); ?>>Links anzeigen</option>
-        <option value="2" <?php selected( $value, '2' ); ?>>Zentriert mit Hintergrundbild</option>
-		<option value="3" <?php selected( $value, '3' ); ?>>Nur Hintergrundbild</option>
+        <option value="1" <?php selected( $value, '1' ); ?>><?php print( __( 'Links anzeigen', 'slrg' )); ?></option>
+        <option value="2" <?php selected( $value, '2' ); ?>><?php print( __( 'Zentriert mit Hintergrundbild', 'slrg' )); ?></option>
+		<option value="3" <?php selected( $value, '3' ); ?>><?php print( __( 'Nur Hintergrundbild', 'slrg' )); ?></option>
     </select>
 	<style>
 		#slrg_box_id{

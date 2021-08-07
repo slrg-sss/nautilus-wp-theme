@@ -41,7 +41,7 @@
 						}
 					
 						if(strlen(get_theme_mod( 'text_block_social_02')) != 0){
-							echo "<li><a href=\"".get_theme_mod( 'url_block_social_02')."\" target=\"_blank\">".get_theme_mod( 'text_block_social_02')."</a> </li>";
+							echo "<li><a href=\"".get_theme_mod( 'url_block_social_02')."\" target=\"_blank\">".get_theme_mod( 'text_block_social_02')."</a></li>";
 						}
 					
 						if(strlen(get_theme_mod( 'text_block_social_03')) != 0){
@@ -68,7 +68,7 @@
 				<p><u><a href="https://www.slrg.ch/<?php print($actLang); ?>" target="_blank"><?php echo (esc_html_e( 'SLRG Schweiz', 'slrg' ));?></a></u></p>
 				<?php 
 					if(strlen(get_theme_mod( 'text_block_impressum')) != 0){
-						echo "<p><a href=\"".get_theme_mod( 'text_block_impressum')."\">".esc_html_e( 'Impressum', 'slrg' )."</a></p>";
+						echo "<p><a href=\"".get_theme_mod( 'text_block_impressum')."\">".__( 'Impressum', 'slrg' )."</a></p>";
 					}
 				?>
 				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/SRK_Rettungsorganiation_<?php print($actLang); ?>.png" alt="<?php echo (esc_html_e( 'Organisation des SRK', 'slrg' ));?>" id="SRK_Logo"></p>

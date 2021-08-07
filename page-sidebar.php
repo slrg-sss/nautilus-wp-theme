@@ -5,11 +5,6 @@
 get_header(); ?>
 
 <?php $meta = get_post_meta( $post->ID, '_slrg_meta_key', true );
-	if($meta == 1 || $meta == ''){
-		print("<div id=\"PageHeader01\"><h1 class='title'>");
-		the_title();
-		print("</h1></div>");
-	};
 	if($meta == 2){
 		$bg_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 		print("</main><div id=\"PageHeader02\" style=\"background-image: url('".$bg_url."'\">
@@ -35,6 +30,13 @@ get_header(); ?>
 					<article class="post">
 										
 						<div class="the-content">
+							
+							<?php if($meta == 1 || $meta == ''){
+									print("<h1 class='title'>");
+									the_title();
+									print("</h1>");
+								};
+							?>
 							<?php the_content(); ?>
 							<?php wp_link_pages(); ?>
 						</div>
