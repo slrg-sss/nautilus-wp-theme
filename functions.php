@@ -1,6 +1,4 @@
 <?php
-// Define the version so we can easily replace it throughout the theme
-define( 'SLRG_VERSION', 1.0 );
 
 /*-----------------------------------------------------------------------------------*/
 /*  Set the maximum allowed width for any content in the theme
@@ -506,3 +504,15 @@ function slrg_save_postdata( $post_id ) {
     }
 }
 add_action( 'save_post', 'slrg_save_postdata' );
+
+
+//------------------------------------------------------------------------------
+// Update checker to provide updates in the WordPress admin interface
+//------------------------------------------------------------------------------
+require 'updater/plugin-update-checker.php';
+$updateChecker = Puc_v4_Factory::buildUpdateChecker(
+  'https://update.wordpress.slrg.dev/themes/slrg-sss-nautilus/latest/',
+  __FILE__,
+  'slrg-sss-nautilus'
+);
+//------------------------------------------------------------------------------

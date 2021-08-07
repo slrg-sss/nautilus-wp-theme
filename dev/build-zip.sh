@@ -35,6 +35,7 @@ cp "$INPUT_DIR"/README.md "$STAGE_DIR"
 cp -r "$INPUT_DIR"/assets "$STAGE_DIR"
 cp -r "$INPUT_DIR"/js "$STAGE_DIR"
 cp -r "$INPUT_DIR"/languages "$STAGE_DIR"
+cp -r "$INPUT_DIR"/updater "$STAGE_DIR"
 
 # override version in style.css if requested
 if [[ -n "$VERSION_OVERRIDE" ]]; then

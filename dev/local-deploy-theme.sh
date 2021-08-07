@@ -4,7 +4,8 @@ set -e
 # build theme
 ./build-zip.sh
 
-# move theme to WordPress
+# remove theme from WordPress installation
 rm -rf ./wp/wp-content/themes/slrg-sss-nautilus/
-unzip -d ./wp/wp-content/themes/slrg-sss-nautilus/ ../dist/slrg-sss-nautilus.zip
 
+# unzip theme into WordPress installation
+unzip -d ./wp/wp-content/themes/ ../dist/slrg-sss-nautilus.zip
