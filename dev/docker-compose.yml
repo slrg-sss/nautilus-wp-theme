@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  wpdev-wp:
+    image: wordpress:latest
+    restart: unless-stopped
+    depends_on:
+      - wpdev-db
+    networks:
+      - wpdev-net
+    volumes:
+      - "./wp:/var/www/html"
+    ports:
+      - "8585:80"
+    environment:
+      WORDPRESS_DB_HOST: wpdev-db:3306
+      WORDPRESS_DB_USER: wp-slrg-user
+      WORDPRESS_DB_PASSWORD: wp-slrg-user-password
+      WORDPRESS_DB_NAME: wp-slrg-db
+
+  wpdev-db:
+    image: mysql:latest
+    restart: unless-stopped
+    networks:
+      - wpdev-net
+    volumes:
+      - "wpdev-db-data:/var/lib/mysql"
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: wp-slrg-db-root-password
+      MYSQL_DATABASE: wp-slrg-db
+      MYSQL_USER: wp-slrg-user
+      MYSQL_PASSWORD: wp-slrg-user-password
+
+volumes:
+  wpdev-db-data:
+
+networks:
+  wpdev-net:

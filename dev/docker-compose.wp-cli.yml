@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+
+  wpdev-cli:
+    image: wordpress:cli
+    restart: "no"
+    user: "33:33" # needed to match UID of www-data
+    depends_on:
+      - wpdev-wp
+      - wpdev-db
+    networks:
+      - wpdev-net
+    volumes:
+      - "./wp:/var/www/html" # must match definition in wpdev-wp
+    environment:
+      WORDPRESS_DB_HOST: wpdev-db:3306
+      WORDPRESS_DB_USER: wp-slrg-user
+      WORDPRESS_DB_PASSWORD: wp-slrg-user-password
+      WORDPRESS_DB_NAME: wp-slrg-db
