@@ -1,17 +1,17 @@
-# Contributing to the SLRG WordPress Theme
+# Contributing to the SLRG/SSS Nautilus WordPress Theme
 
 *Thank you for taking time to contribute!
 We need volunteer developers to help maintain and improve this WordPress theme.*
 
 ## How can I contribute?
-* Reporting bugs and layout defects via [issues](https://github.com/slrg-sss/slrg-wordpress-theme/issues)
-* Suggesting enhancements and improvements via [issues](https://github.com/slrg-sss/slrg-wordpress-theme/issues)
+* Reporting bugs and layout defects via [issues](https://github.com/slrg-sss/nautilus-wp-theme/issues)
+* Suggesting enhancements and improvements via [issues](https://github.com/slrg-sss/nautilus-wp-theme/issues)
 * Proposing changes via pull requests *(see below)*
 
 ## Pull Requests
 
 When contributing to this repository, it is best to first discuss non-trivial changes you wish to make via
-an [issue](https://github.com/slrg-sss/slrg-wordpress-theme/issues), or any other method
+an [issue](https://github.com/slrg-sss/nautilus-wp-theme/issues), or any other method
 with the maintainers of this repository before proposing a change. This ensures that your changes
 have the best chance to be accepted. We are happy to provide guidance.
 

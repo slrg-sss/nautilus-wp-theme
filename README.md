@@ -1,4 +1,4 @@
-# SLRG WordPress Theme
+# SLRG/SSS Nautilus WordPress Theme
 
 A WordPress Theme for sections and regions of the Swiss Lifesaving Society.
 
@@ -10,8 +10,8 @@ General feedback can be submitted using an online form.
 You can find links to these resources on [wordpress.slrg.dev](https://wordpress.slrg.dev).
 
 It is also possible to use GitHub directly for...
-* Reporting bugs and layout defects via [issues](https://github.com/slrg-sss/slrg-wordpress-theme/issues)
-* Suggesting enhancements and improvements via [issues](https://github.com/slrg-sss/slrg-wordpress-theme/issues)
+* Reporting bugs and layout defects via [issues](https://github.com/slrg-sss/nautilus-wp-theme/issues)
+* Suggesting enhancements and improvements via [issues](https://github.com/slrg-sss/nautilus-wp-theme/issues)
 
 
 ### Contributing and further development
