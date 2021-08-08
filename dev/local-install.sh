@@ -47,6 +47,9 @@ fi
   wp language plugin install --all de_DE &&
   wp language plugin install --all fr_FR &&
   wp language plugin install --all it_IT &&
+  wp language theme install --all de_DE &&
+  wp language theme install --all fr_FR &&
+  wp language theme install --all it_IT &&
   wp site switch-language de_DE'
 
 # build and move the development version of theme into the local WordPress deployment

@@ -5,6 +5,9 @@
 * Docker and Docker-Compose need to be installed.
 * If not otherwise stated, the commands need to be executed in the `dev` directory.
 * The WordPress installation can be reached at [`localhost:8585`](http://localhost:8585)
+* If you want to prevent IntelliJ IDEA from indexing the deployed theme, mark the
+  `./wp/wp-content/themes/slrg-sss-nautilus` folder as *Excluded* in the
+  settings *(File | Project Structure | Modules | Sources)*.
 
 
 ## Docker
