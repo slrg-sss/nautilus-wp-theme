@@ -5,7 +5,7 @@ THEME_SLUG="slrg-sss-nautilus"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 INPUT_DIR="$(cd "$SCRIPT_DIR/.."; pwd -P)"
-OUTPUT_DIR="$(cd "$SCRIPT_DIR/../dist"; pwd -P)"
+OUTPUT_DIR="$INPUT_DIR/dist"
 
 # define version override if requested
 if [[ -n "$1" ]]; then
