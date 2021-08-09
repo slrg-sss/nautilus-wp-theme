@@ -1,0 +1,25 @@
+name: Build ZIP
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  build-zip:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build ZIP
+        id: build-zip
+        run: ./dev/build-zip.sh
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: slrg-sss-nautilus-${{ github.sha }}.zip
+          path: ./dist/slrg-sss-nautilus.zip
