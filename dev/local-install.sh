@@ -22,7 +22,7 @@ fi
 # deactivate comments and require approval for comments
 # remove ping sites and avoid indexing by search engines
 ./wp-cli.sh bash -c \
- 'wp option update blogdescription "Ihre Rettungsschwimmer!" &&
+  'wp option update blogdescription "Ihre Rettungsschwimmer!" &&
   wp option update date_format "j. F Y" &&
   wp option update time_format "G:i" &&
   wp option update links_updated_date_format "j. F Y, G:i" &&
@@ -34,14 +34,14 @@ fi
 
 # install and activate plugins
 ./wp-cli.sh bash -c \
- 'wp plugin install --activate debug-bar &&
+  'wp plugin install --activate debug-bar &&
   wp plugin install --activate wordpress-importer &&
   wp plugin install --activate classic-widgets &&
   wp plugin install --activate widget-options'
 
 # install languages (DE/FR/IT) and activate DE
 ./wp-cli.sh bash -c \
- 'wp language core install de_DE &&
+  'wp language core install de_DE &&
   wp language core install fr_FR &&
   wp language core install it_IT &&
   wp language plugin install --all de_DE &&
@@ -57,4 +57,3 @@ fi
 
 # activate 'slrg-sss-nautilus' theme
 ./wp-cli.sh wp theme activate slrg-sss-nautilus
-
