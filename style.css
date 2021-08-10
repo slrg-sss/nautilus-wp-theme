@@ -231,8 +231,8 @@ input[type="submit"] {
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    background-color: #375B9B;
-    color: #fff;
+  background-color: #375B9B;
+  color: #fff;
 }
 
 html input[type="button"]:focus,
@@ -355,7 +355,7 @@ button, .wp-block-button, .wp-block-post-excerpt__more-text{
   font-size: 17px;
   padding: 0px;
   display: inline-block;
-  margin-left: 0px !important;
+  margin: auto;
   margin-top: 5px;
   margin-bottom: 10px;
   height: 40px;
@@ -375,8 +375,8 @@ button a, .wp-block-button a, .wp-block-post-excerpt__more-text a{
 }
 
 button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover, .wp-block-post-excerpt__more-text:hover a{
-    background-color: #375B9B;
-    color: #fff;
+  background-color: #375B9B;
+  color: #fff;
 }
 
 
@@ -391,8 +391,8 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
 }
 
 #content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover{
-    background-color: #375B9B;
-    color: #fff;
+  background-color: #375B9B;
+  color: #fff;
 }
 
 
@@ -576,7 +576,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #375B9B;
+  color: #C02F2E;
 }
 
 /* Alignment */
@@ -1250,7 +1250,7 @@ article .post-meta a {
 }
 
 article .post-meta a:hover {
-  color: #325B9B;
+  color: #C02F2E;
 }
 
 article .meta {
@@ -1561,7 +1561,7 @@ footer #footerSocialLinks ul li a {
 }
 
 footer #footerSocialLinks ul li a:hover {
-	color: #375B9B;
+	color: #C02F2E;
 }
 
 
