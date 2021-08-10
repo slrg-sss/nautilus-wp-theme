@@ -498,10 +498,10 @@ function slrg_custom_box_html( $post ) {
     ?>
     <label for="slrg-sss-nautilus_header_option"><?php print( __( 'Gewünschter Header anzeigen', 'slrg-sss-nautilus' )); ?></label>
     <select name="slrg-sss-nautilus_header_option" id="slrg-sss-nautilus_header_option" class="postbox" style="min-width: 150px; border: 1px solid #777; margin-top: 8px;">
-        <option value="1" <?php selected( $value, '1' ); ?>><?php print( __( 'Titel links anzeigen', 'slrg-sss-nautilus' )); ?></option>
-        <option value="2" <?php selected( $value, '2' ); ?>><?php print( __( 'Titel zentriert mit Hintergrundbild', 'slrg-sss-nautilus' )); ?></option>
-		<option value="3" <?php selected( $value, '3' ); ?>><?php print( __( 'Nur Hintergrundbild', 'slrg-sss-nautilus' )); ?></option>
-		<option value="0" <?php selected( $value, '0' ); ?>><?php print( __( 'kein Header', 'slrg-sss-nautilus' )); ?></option>
+    <option value="1" <?php selected( $value, '1' ); ?>><?php print( __( 'Titel links (Standard)', 'slrg-sss-nautilus' )); ?></option>
+    <option value="2" <?php selected( $value, '2' ); ?>><?php print( __( 'Titel mit Hintergrundbild', 'slrg-sss-nautilus' )); ?></option>
+		<option value="3" <?php selected( $value, '3' ); ?>><?php print( __( 'Nur Bild', 'slrg-sss-nautilus' )); ?></option>
+		<option value="0" <?php selected( $value, '0' ); ?>><?php print( __( 'Kein Header', 'slrg-sss-nautilus' )); ?></option>
     </select>
 	<style>
 		#slrg_box_id{
