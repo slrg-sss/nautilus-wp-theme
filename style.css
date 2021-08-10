@@ -150,8 +150,8 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+  content: ''; /* needed in case 'none' fails below */
+  content: none; /* https://stackoverflow.com/a/6803278 */
 }
 
 table {
@@ -216,13 +216,11 @@ input[type="submit"] {
   -moz-appearance: none;
   appearance: none;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   color: #000;
   cursor: pointer;
-  padding: 4px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 0px;
+  padding: 4px 15px;
+  margin-top: 0;
   margin-left: 10px;
   background-color: #ececec;
 
@@ -277,12 +275,12 @@ input[type="search"]::-webkit-search-decoration {
   appearance: none;
   color: #888888;
   border: 1px solid #dddddd;
-  border-radius: 0px;
+  border-radius: 0;
   font-size: 17px;
 }
 
 #sidebar .wp-block-search .wp-block-search__button {
-  margin-left: 0rem !important;
+  margin-left: 0 !important;
 }
 
 /**/
@@ -303,7 +301,7 @@ textarea {
   appearance: none;
   color: #888888;
   border: 1px solid #dddddd;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 input[type=text]:focus,
@@ -353,16 +351,14 @@ select {
 /**/
 button, .wp-block-button, .wp-block-post-excerpt__more-text {
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #ececec;
   color: #000;
   cursor: pointer;
   font-size: 17px;
-  padding: 0px;
+  padding: 0;
   display: inline-block;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 5px auto 10px;
   height: 40px;
 }
 
@@ -373,10 +369,8 @@ button, .wp-block-button, .wp-block-post-excerpt__more-text {
 button a, .wp-block-button a, .wp-block-post-excerpt__more-text a {
   color: #000;
   text-decoration: none;
-  padding: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 0px;
+  padding: 8px 15px;
+  border-radius: 0;
 }
 
 button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover, .wp-block-post-excerpt__more-text:hover a {
@@ -388,10 +382,8 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
 #content .wp-block-button__link, #content .wp-block-file__button, .h-readmore .wp-block-button .wp-block-button__link {
   font-size: 17px;
   background-color: #ececec;
-  padding: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border-radius: 0px;
+  padding: 8px 15px;
+  border-radius: 0;
   color: #000;
 }
 
@@ -524,25 +516,17 @@ cite {
   color: #375B9B;
 }
 
-wp-block-quote
-em, i {
+.wp-block-quote, em, i {
   font-style: italic;
 }
 
 blockquote {
-  margin: 0 1.5em;
   font-size: 17px;
   font-style: normal;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 20px;
+  padding: 10px 20px 10px 15px;
   border-left: 1px solid #ddd;
-  margin-left: 15px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 5px 1.5em 10px 15px;
   display: block;
-
 }
 
 address {
@@ -575,7 +559,7 @@ figure {
 }
 
 hr, #content .wp-block-separator {
-  border: 0px;
+  border: 0;
   border-bottom: 1px solid #dddddd;
   margin-bottom: 15px;
 }
@@ -747,12 +731,10 @@ header {
   display: inline-block;
   width: 100%;
   height: auto;
-  padding: 0px;
-  margin: 0px;
   background: #fff;
   border-bottom: 1px solid #dddddd;
-  padding-bottom: 7px;
-  margin-bottom: 35px;
+  padding: 0 0 7px;
+  margin: 0 0 35px;
 }
 
 header #metaNav {
@@ -771,9 +753,8 @@ header #brand {
 
 header #metaNav ul {
   list-style: none;
-  margin: 0;
   float: right;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 header #metaNav ul li {
@@ -793,14 +774,14 @@ header #metaNav ul li a:hover {
 
 header #metaNav ul li:after {
   content: "|";
-  margin: 0 0px 0 10px;
+  margin: 0 0 0 10px;
   color: #929ba6;
   font-size: 14px;
 }
 
 header #metaNav ul li:first-of-type:after {
   content: "";
-  margin: 0 0px 0 10px;
+  margin: 0 0 0 10px;
 }
 
 #sidebar .menu:first-child {
@@ -877,53 +858,41 @@ header #metaNav ul li:first-of-type:after {
 
 #sidebar .menu li:before, #sidebar .widget_categories ul li:before {
   content: "";
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #sidebar .widget_categories ul {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #sidebar .widget_categories ul li {
   width: 100%;
   float: left;
-  margin-left: 0px;
+  margin-left: 0;
   margin-top: 5px;
 }
 
 #sidebar .searchform #searchsubmit {
   margin-top: 7px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #sidebar .wp-block-archives-list li::before {
   content: "";
 }
 
-#sidebar .wp-block-archives-list {
-  margin-left: none;
-}
-
 #sidebar .wp-block-categories-list li::before {
   content: "";
-}
-
-#sidebar .wp-block-categories-list {
-  margin-left: none;
 }
 
 #sidebar .wp-block-latest-posts__list li::before {
   content: "";
 }
 
-#sidebar .wp-block-latest-posts__list {
-  margin-left: none;
-}
-
 #sidebar article {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .search-header {
@@ -935,14 +904,13 @@ header #metaNav ul li:first-of-type:after {
 }
 
 .search-title {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .search .content ul {
   list-style: none;
-  margin: 0;
   float: left;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .search .content ul li {
@@ -1028,12 +996,12 @@ article ul li:before {
 
 .blocks-gallery-grid li:before {
   content: "";
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 article ul.has-background {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 /* Menu
@@ -1060,7 +1028,6 @@ article ul.has-background {
   right: 25px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-
 }
 
 .nav-menu ul {
@@ -1160,7 +1127,7 @@ article ul.has-background {
 }
 
 .nav-menu > li:last-child > a {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .nav-menu > li a.menu-actived {
@@ -1221,12 +1188,11 @@ article ul.has-background {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform-origin: 0% 50%;
-  -ms-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
   -webkit-transition: -webkit-transform 0.2s;
   transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
   transition: transform 0.2s, -webkit-transform 0.2s;
   z-index: 99;
 }
@@ -1256,8 +1222,7 @@ article ul.has-background {
 -------------------------------------------------------------- */
 article {
   background: transparent;
-  padding: 0;
-  padding-bottom: 20px;
+  padding: 0 0 20px;
   margin-bottom: 50px;
   border-bottom: 1px solid #dddddd;
 }
@@ -1286,7 +1251,7 @@ article .post-meta-left, article .post-meta-right {
   width: 50%;
   min-width: 200px;
   float: left;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-size: 14px;
   display: inline-block;
 }
@@ -1351,7 +1316,7 @@ article .post-meta-right .post-categories li:last-child:after {
 
 article .post-meta-right .post-categories li:before {
   content: "";
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .wp-block-image img {
@@ -1388,15 +1353,13 @@ article .post-meta-right .post-categories li:before {
 
 #pagination .past-page a, #pagination .next-page a {
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #ececec;
   color: #000;
   cursor: pointer;
   font-size: 17px;
   line-height: 1;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 10px 15px;
   margin-top: 10px;
   display: inline-block;
   text-decoration: none;
@@ -1415,8 +1378,7 @@ h3#comments {
 
 .commentlist {
   list-style: none;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .commentlist li {
@@ -1430,17 +1392,16 @@ h3#comments {
   position: relative;
   list-style: none;
   background-color: #d2ddef;
-
 }
 
 .commentlist .comment .children {
-  margin-top: 0px;
-  margin-left: 0px;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .commentlist .comment-author {
   float: left;
-  margin-left: 0px;
+  margin-left: 0;
   width: 100%;
 }
 
@@ -1457,11 +1418,11 @@ h3#comments {
 
 .commentlist .comment-author .fn {
   width: calc(100% - 100px);
-  padding: 0px;
+  padding: 0;
   display: inline-block;
   float: left;
   margin-top: 7px;
-  margin-left: 0px;
+  margin-left: 0;
   font-style: normal;
 }
 
@@ -1488,15 +1449,13 @@ h3#comments {
 
 .comment-reply-link {
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #375B9B;
   color: #fff;
   cursor: pointer;
   font-size: 17px;
   line-height: 1;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 10px 15px;
   margin-top: 10px;
   display: inline-block;
   text-decoration: none;
@@ -1536,7 +1495,7 @@ h3#comments {
 }
 
 #respond form .submit {
-  margin-left: 0px;
+  margin-left: 0;
   margin-top: 20px;
 }
 
@@ -1549,7 +1508,7 @@ h3#comments {
 }
 
 .h-readmore .wp-block-button {
-  margin-left: 0px;
+  margin-left: 0;
   margin-top: 10px;
 }
 
@@ -1606,17 +1565,15 @@ h3#comments {
   font-size: 14px;
   line-height: 21px;
   padding-bottom: 10px;
-  margin: 0px;
+  margin: 0;
 }
 
 footer #footerSocialLinks ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 14px;
   padding: 0;
   float: left;
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 14px;
 }
 
 footer #footerSocialLinks ul li {
@@ -1637,14 +1594,14 @@ footer #footerSocialLinks ul li a:hover {
 
 footer #footerSocialLinks ul li:after {
   content: "|";
-  margin: 0 0px 0 10px;
+  margin: 0 0 0 10px;
   color: #000;
   font-size: 14px;
 }
 
 footer #footerSocialLinks ul li:last-of-type:after {
   content: "";
-  margin: 0 0px 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .hide-text {
@@ -1729,8 +1686,8 @@ html[xmlns] .clearfix {
   width: 100%;
   height: 50px;
   font-size: 50px;
-  padding-bottom: 0px;
-  padding-top: 0px;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 #PageHeader03 {
@@ -1761,12 +1718,12 @@ html[xmlns] .clearfix {
 }
 
 #content .wp-block-query ul {
-  margin: 0px;
+  margin: 0;
 }
 
 #content .wp-block-query ul li:before {
   content: "";
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 #content .wp-block-query ul li h2 {
@@ -1789,7 +1746,7 @@ html[xmlns] .clearfix {
   .nav-menu.nav-menu-mobile {
     display: block !important;
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
     width: 100%;
     background: transparent;
@@ -1816,7 +1773,7 @@ html[xmlns] .clearfix {
   }
 
   header #metaNav ul {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   .custom-logo {
@@ -1835,7 +1792,7 @@ html[xmlns] .clearfix {
     margin: 0;
     position: absolute;
     top: 128px;
-    right: 0px;
+    right: 0;
     -ms-transform: translateY(0%);
     transform: translateY(0%);
 
@@ -1880,7 +1837,7 @@ html[xmlns] .clearfix {
   }
 
   .nav-menu.nav-menu-mobile ul ul {
-    left: 0px;
+    left: 0;
   }
 
   .nav-menu.nav-menu-mobile li {
@@ -1973,7 +1930,7 @@ html[xmlns] .clearfix {
   }
 
   header #metaNav ul {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   .custom-logo {
@@ -1996,7 +1953,7 @@ html[xmlns] .clearfix {
   }
 
   #site-info-right {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 20px;
   }
 
@@ -2007,7 +1964,7 @@ html[xmlns] .clearfix {
 
   footer #footerSocialLinks ul {
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 14px;
   }
 
@@ -2036,15 +1993,15 @@ html[xmlns] .clearfix {
   }
 
   .sidebarLeft {
-    width: calc(100% - 0px);
+    width: calc(100% - 0);
     float: left;
     padding-bottom: 20px;
-    padding-right: 0px;
+    padding-right: 0;
     overflow: hidden;
   }
 
   .sidebarRight {
-    width: calc(100% - 0px);
+    width: calc(100% - 0);
     float: left;
     padding-bottom: 20px;
   }
@@ -2074,8 +2031,8 @@ html[xmlns] .clearfix {
     width: 100%;
     height: 40px;
     font-size: 40px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   #PageHeader03 {
@@ -2105,21 +2062,19 @@ html[xmlns] .clearfix {
 
   .search-header {
     width: 80%;
-    margin: auto;
     float: none;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px auto 30px;
     text-align: center;
   }
 
   .search .content ul {
-    margin-right: 0px;
+    margin-right: 0;
   }
 
   .search .content ul li {
     margin-top: 30px;
-    width: calc(100% - 0px);
-    padding-right: 0px;
+    width: calc(100% - 0);
+    padding-right: 0;
     min-height: 200px;
   }
 
@@ -2135,6 +2090,5 @@ html[xmlns] .clearfix {
   article .post-meta-right .category {
     float: left;
   }
-
 
 }
