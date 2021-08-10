@@ -701,6 +701,7 @@ table > thead > tr > th, table > thead > tr > td {
 
 th {
   font-weight: bold;
+  text-align: left;
 }
 
 .is-style-stripes table > thead > tr > th {
