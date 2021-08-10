@@ -26,21 +26,23 @@ register_nav_menus(
 );
 
 /*-----------------------------------------------------------------------------------*/
-/* Integration of jQuery, Style.CSS
+/* Enqueue theme stylesheets and scripts
 /*-----------------------------------------------------------------------------------*/
-function script_int() {
+function enqueue_theme_css_js() {
   wp_enqueue_style(
-    'style.css',
-    get_template_directory_uri() . '/style.css',
+   'style.css',
+   get_template_directory_uri() . '/style.css',
+   array(),
+   wp_get_theme()->get( 'Version' )
+  );
+  wp_enqueue_script(
+    'main.js',
+    get_template_directory_uri() . '/js/main.js',
+    array('jquery'),
     wp_get_theme()->get( 'Version' )
-    );
- wp_enqueue_script(
-     'main.js',
-     get_template_directory_uri() . '/js/main.js',
-     array('jquery')
- );
+  );
 }
-add_action( 'wp_enqueue_scripts', 'script_int' );
+add_action( 'wp_enqueue_scripts', 'enqueue_theme_css_js' );
 
 /*-----------------------------------------------------------------------------------*/
 /* Activate sidebar for Wordpress use
