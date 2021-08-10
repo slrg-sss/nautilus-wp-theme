@@ -10,7 +10,7 @@
 <footer class="site-footer">
 	<div class="wrapper">
 		<div id="site-info-left">
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/SLRG_Logo_footer.png" alt="<?php echo (esc_html_e( 'SLRG Logo ohne Titel', 'slrg' ));?>">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/SLRG_Logo_footer.png" alt="<?php echo (esc_html_e( 'SLRG Logo ohne Titel', 'slrg-sss-nautilus' ));?>">
 			<div id="site-address">
 					<?php 
 						echo "<p><strong>".get_theme_mod( 'text_block_section')."</strong><br>";
@@ -65,13 +65,13 @@
 			</div>
 		</div>
 		<div id="site-info-right">
-				<p><u><a href="https://www.slrg.ch/<?php print($actLang); ?>" target="_blank"><?php echo (esc_html_e( 'SLRG Schweiz', 'slrg' ));?></a></u></p>
+				<p><u><a href="https://www.slrg.ch/<?php print($actLang); ?>" target="_blank"><?php echo (esc_html_e( 'SLRG Schweiz', 'slrg-sss-nautilus' ));?></a></u></p>
 				<?php 
 					if(strlen(get_theme_mod( 'text_block_impressum')) != 0){
-						echo "<p><a href=\"".get_theme_mod( 'text_block_impressum')."\">".__( 'Impressum', 'slrg' )."</a></p>";
+						echo "<p><a href=\"".get_theme_mod( 'text_block_impressum')."\">".__( 'Impressum', 'slrg-sss-nautilus' )."</a></p>";
 					}
 				?>
-				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/SRK_Rettungsorganiation_<?php print($actLang); ?>.png" alt="<?php echo (esc_html_e( 'Organisation des SRK', 'slrg' ));?>" id="SRK_Logo"></p>
+				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/SRK_Rettungsorganiation_<?php print($actLang); ?>.png" alt="<?php echo (esc_html_e( 'Organisation des SRK', 'slrg-sss-nautilus' ));?>" id="SRK_Logo"></p>
 		</div>
 	</div>
 </footer>

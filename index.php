@@ -25,7 +25,7 @@
 							<?php the_time('j. F Y'); ?> 
 							<?php if( comments_open() ) : ?>
 								<span class="comments-link">
-									 | <?php comments_popup_link( __( 'Jetzt kommentieren!', 'slrg' ), __( '1 Kommentar', 'slrg' ), __( '% Kommentare', 'slrg' ) ); 
+									 | <?php comments_popup_link( __( 'Jetzt kommentieren!', 'slrg-sss-nautilus' ), __( '1 Kommentar', 'slrg-sss-nautilus' ), __( '% Kommentare', 'slrg-sss-nautilus' ) ); 
 									?>
 								</span>
 							<?php endif; ?>
@@ -35,9 +35,9 @@
 								<?php 
 								$anzahl = get_the_category(); 
 								if(count($anzahl) == 1){
-									echo (esc_html_e( 'Kategorie', 'slrg' ));
+									echo (esc_html_e( 'Kategorie', 'slrg-sss-nautilus' ));
 								}else{
-									echo (esc_html_e( 'Kategorien', 'slrg' ));
+									echo (esc_html_e( 'Kategorien', 'slrg-sss-nautilus' ));
 								}
 								?>:</h5><?php echo get_the_category_list(); ?>
 							</div>
@@ -46,7 +46,7 @@
 						
 						<div class="the-content">
 							<?php echo substr(get_the_excerpt(), 0,240); ?>...
-							<div class="h-readmore"><div class="wp-block-button"><a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php esc_html_e( 'weiterlesen', 'slrg' ); ?></a></div></div>
+							<div class="h-readmore"><div class="wp-block-button"><a href="<?php the_permalink(); ?>" class="wp-block-button__link"><?php esc_html_e( 'weiterlesen', 'slrg-sss-nautilus' ); ?></a></div></div>
 						</div>
 								
 					</article>
@@ -62,7 +62,7 @@
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg-sss-nautilus' ); ?></h1>
 				</article>
 
 			<?php endif; ?>

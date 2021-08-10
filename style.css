@@ -6,6 +6,7 @@ Author URI: https://wordpress.slrg.dev
 Description: This is the SLRG/SSS Nautilus Theme for sections and regions of the Swiss Lifesaving Society
 Version: 1.0.0
 Requires at least: 5.7
+Text Domain: slrg-sss-nautilus
 Requires PHP: 7.3
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -231,7 +232,8 @@ html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   background-color: #375B9B;
-  color: #fff;
+  opacity: 0.8;
+  color: #000;
 }
 
 html input[type="button"]:focus,
@@ -250,7 +252,7 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-
+/*Input Search*/
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -261,6 +263,27 @@ input[type="search"] {
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+/*search block Gutenberg*/
+.wp-block-search .wp-block-search__inside-wrapper {
+    display:flex;
+    flex-wrap: wrap;
+}
+.wp-block-search__input {
+    flex-grow: 0;
+    margin-right: 10px;
+    padding: 3px;
+    appearance: none;
+    color: #888888;
+    border: 1px solid #dddddd;
+    border-radius: 0px;
+    font-size: 17px;
+}
+#sidebar .wp-block-search .wp-block-search__button {
+    margin-left:0rem !important;
+}
+
+/**/
+
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -323,7 +346,7 @@ select {
   font-size: 17px;
   line-height: 1.5em;
 }
-
+/**/
 button, .wp-block-button, .wp-block-post-excerpt__more-text{
   border: none;
   border-radius: 0px;
@@ -333,7 +356,7 @@ button, .wp-block-button, .wp-block-post-excerpt__more-text{
   font-size: 17px;
   padding: 0px;
   display: inline-block;
-  margin: auto;
+  margin-left: 0px !important;
   margin-top: 5px;
   margin-bottom: 10px;
   height: 40px;
@@ -353,8 +376,9 @@ button a, .wp-block-button a, .wp-block-post-excerpt__more-text a{
 }
 
 button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover, .wp-block-post-excerpt__more-text:hover a{
-  background-color: #375B9B;
-  color: #fff;
+  background-color: #ececec;
+  opacity: 0.8;
+  color: #000;
 }
 
 
@@ -369,8 +393,8 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
 }
 
 #content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover{
-  background-color: #375B9B;
-  color: #fff;
+    opacity: 0.8;
+    color: #000;
 }
 
 
@@ -554,7 +578,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #C02F2E;
+  color: #375B9B;
 }
 
 /* Alignment */
@@ -862,6 +886,29 @@ header #metaNav ul li:first-of-type:after{
 	margin-left: 0px;
 }
 
+#sidebar .wp-block-archives-list li::before {
+    content: "";
+}
+#sidebar .wp-block-archives-list {
+    margin-left: none;
+}
+#sidebar .wp-block-categories-list li::before {
+    content: "";
+}
+#sidebar .wp-block-categories-list {
+    margin-left: none;
+}
+
+#sidebar .wp-block-latest-posts__list li::before {
+    content: "";
+}
+#sidebar .wp-block-latest-posts__list {
+    margin-left: none;
+}
+#sidebar article {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
 .search-header{
 	width: 100%;
 	float: left;
@@ -1205,7 +1252,7 @@ article .post-meta a {
 }
 
 article .post-meta a:hover {
-  color: #C02F2E;
+  color: #325B9B;
 }
 
 article .meta {
@@ -1516,7 +1563,7 @@ footer #footerSocialLinks ul li a {
 }
 
 footer #footerSocialLinks ul li a:hover {
-	color: #C02F2E;
+	color: #375B9B;
 }
 
 

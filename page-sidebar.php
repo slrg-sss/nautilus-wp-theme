@@ -48,7 +48,7 @@ get_header(); ?>
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Keine Mitteilung vorhanden', 'slrg-sss-nautilus' ); ?></h1>
 				</article>
 
 			<?php endif; ?>

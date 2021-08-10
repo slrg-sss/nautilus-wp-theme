@@ -20,10 +20,27 @@ add_theme_support( 'post-thumbnails' );
 /*-----------------------------------------------------------------------------------*/
 register_nav_menus( 
 	array(
-		'primary'	=>	__( 'Hauptmenü', 'slrg' ), 
-		'meta'	=>	__( 'Meta-Navigation', 'slrg' ),
+		'primary'	=>	__( 'Hauptmenü', 'slrg-sss-nautilus' ), 
+		'meta'	=>	__( 'Meta-Navigation', 'slrg-sss-nautilus' ),
 	)
 );
+
+/*-----------------------------------------------------------------------------------*/
+/* Integration of jQuery, Style.CSS
+/*-----------------------------------------------------------------------------------*/
+function script_int() {
+  wp_enqueue_style(
+    'style.css',
+    get_template_directory_uri() . '/style.css',
+    wp_get_theme()->get( 'Version' )
+    );
+ wp_enqueue_script(
+     'main.js',
+     get_template_directory_uri() . '/js/main.js',
+     array('jquery')
+ );
+}
+add_action( 'wp_enqueue_scripts', 'script_int' );
 
 /*-----------------------------------------------------------------------------------*/
 /* Activate sidebar for Wordpress use
@@ -40,9 +57,9 @@ function slrg_register_sidebars() {
 		'empty_title'=> '',
 	));
 	register_sidebar( array(
-		'name' => __( 'Sidebar Beiträge', 'slrg' ),
+		'name' => __( 'Sidebar Beiträge', 'slrg-sss-nautilus' ),
 		'id' => 'sidebar-custom-header',
-		'description' => __( 'Bereich für Widget in der Sidebar für Beiträge', 'slrg' ),
+		'description' => __( 'Bereich für Widget in der Sidebar für Beiträge', 'slrg-sss-nautilus' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -54,7 +71,7 @@ add_action( 'widgets_init', 'slrg_register_sidebars' );
 /*-----------------------------------------------------------------------------------*/
 /* Load translation
 /*-----------------------------------------------------------------------------------*/
-load_theme_textdomain('slrg', get_template_directory() . '/languages' );
+load_theme_textdomain('slrg-sss-nautilus', get_template_directory() . '/languages' );
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -87,32 +104,32 @@ function slrg_add_custom_gutenberg_color_palette() {
 		'editor-color-palette',
 		[
 			[
-				'name'  => esc_html__( 'Schwarz', 'slrg' ),
+				'name'  => esc_html__( 'Schwarz', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-Schwarz',
-				'color' => '#191919',
+				'color' => '#000000',
 			],
 			[
-				'name'  => esc_html__( 'SLRG Blau', 'slrg' ),
+				'name'  => esc_html__( 'SLRG Blau', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-Blau',
-				'color' => '#004fab',
+				'color' => '#375B9B',
 			],
 			[
-				'name'  => esc_html__( 'SLRG Rot', 'slrg' ),
+				'name'  => esc_html__( 'SLRG Rot', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-Rot',
-				'color' => '#EA0A0A',
+				'color' => '#C02F2E',
 			],
 			[
-				'name'  => esc_html__( 'BG Schwarz', 'slrg' ),
+				'name'  => esc_html__( 'BG Schwarz', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-BG-Schwarz',
 				'color' => '#ececec',
 			],
 			[
-				'name'  => esc_html__( 'SLRG BG Blau', 'slrg' ),
+				'name'  => esc_html__( 'SLRG BG Blau', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-BG-Blau',
 				'color' => '#d2ddef',
 			],
 			[
-				'name'  => esc_html__( 'SLRG BG Rot', 'slrg' ),
+				'name'  => esc_html__( 'SLRG BG Rot', 'slrg-sss-nautilus' ),
 				'slug'  => 'SLRG-BG-Rot',
 				'color' => '#f4d3d3',
 			],
@@ -132,30 +149,30 @@ function slrg_register_theme_customizer( $wp_customize ) {
     $wp_customize->add_panel( 'text_blocks', array(
         'priority'       => 50,
         'theme_supports' => '',
-        'title'          => __( 'Footer', 'slrg' ),
-        'description'    => __( 'Adresse & Links der Sektionen', 'slrg' ),
+        'title'          => __( 'Footer', 'slrg-sss-nautilus' ),
+        'description'    => __( 'Adresse & Links der Sektionen', 'slrg-sss-nautilus' ),
     ) );
 
     $wp_customize->add_section( 'adress_text' , array(
-        'title'    => __('Adresse','slrg'),
+        'title'    => __('Adresse','slrg-sss-nautilus'),
         'panel'    => 'text_blocks',
         'priority' => 10
     ) );
 	
 	$wp_customize->add_section( 'social_text' , array(
-        'title'    => __('Socialmedia Links','slrg'),
+        'title'    => __('Socialmedia Links','slrg-sss-nautilus'),
         'panel'    => 'text_blocks',
         'priority' => 20
     ) );
 	
 	$wp_customize->add_section( 'impressum_text' , array(
-        'title'    => __('Impressum Link','slrg'),
+        'title'    => __('Impressum Link','slrg-sss-nautilus'),
         'panel'    => 'text_blocks',
         'priority' => 30
     ) );
 	
 	$wp_customize->add_section( 'copyright_text' , array(
-        'title'    => __('Copyright','slrg'),
+        'title'    => __('Copyright','slrg-sss-nautilus'),
         'panel'    => 'text_blocks',
         'priority' => 40
     ) );
@@ -224,12 +241,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_social_01',
             array(
-                'label'    => __( 'Social-Media-Plattform 01', 'slrg' ),
+                'label'    => __( 'Social-Media-Plattform 01', 'slrg-sss-nautilus' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_01',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'z.B. Facebook', 'slrg' ),
+					'placeholder' => __( 'z.B. Facebook', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -243,7 +260,7 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'settings' => 'url_block_social_01',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'https://www.facebook.com/...', 'slrg' ),
+					'placeholder' => __( 'https://www.facebook.com/...', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -253,12 +270,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_social_02',
             array(
-                'label'    => __( 'Social-Media-Plattform 02', 'slrg' ),
+                'label'    => __( 'Social-Media-Plattform 02', 'slrg-sss-nautilus' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_02',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'z.B. Instagram', 'slrg' ),
+					'placeholder' => __( 'z.B. Instagram', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -272,7 +289,7 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'settings' => 'url_block_social_02',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'https://www.instagram.com/...', 'slrg' ),
+					'placeholder' => __( 'https://www.instagram.com/...', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -282,12 +299,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_social_03',
             array(
-                'label'    => __( 'Social-Media-Plattform 03', 'slrg' ),
+                'label'    => __( 'Social-Media-Plattform 03', 'slrg-sss-nautilus' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_03',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'z.B. Youtube', 'slrg' ),
+					'placeholder' => __( 'z.B. Youtube', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -301,7 +318,7 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'settings' => 'url_block_social_03',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'https://www.youtube.com/...', 'slrg' ),
+					'placeholder' => __( 'https://www.youtube.com/...', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -311,12 +328,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_social_04',
             array(
-                'label'    => __( 'Social-Media-Plattform 04', 'slrg' ),
+                'label'    => __( 'Social-Media-Plattform 04', 'slrg-sss-nautilus' ),
                 'section'  => 'social_text',
                 'settings' => 'text_block_social_04',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'z.B. Tiktok', 'slrg' ),
+					'placeholder' => __( 'z.B. Tiktok', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -330,7 +347,7 @@ function slrg_register_theme_customizer( $wp_customize ) {
                 'settings' => 'url_block_social_04',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'https://www.tiktok.com/...', 'slrg' ),
+					'placeholder' => __( 'https://www.tiktok.com/...', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -340,12 +357,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_section',
             array(
-                'label'    => __( 'Sektion', 'slrg' ),
+                'label'    => __( 'Sektion', 'slrg-sss-nautilus' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_section',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'SLRG Sektion XX', 'slrg' ),
+					'placeholder' => __( 'SLRG Sektion XX', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -355,12 +372,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_street',
             array(
-                'label'    => __( 'Strasse', 'slrg' ),
+                'label'    => __( 'Strasse', 'slrg-sss-nautilus' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_street',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'Strasse', 'slrg' ),
+					'placeholder' => __( 'Strasse', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -370,12 +387,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_street_02',
             array(
-                'label'    => __( 'Strasse 2', 'slrg' ),
+                'label'    => __( 'Strasse 2', 'slrg-sss-nautilus' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_street_02',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'Strasse 2', 'slrg' ),
+					'placeholder' => __( 'Strasse 2', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -385,12 +402,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_location',
             array(
-                'label'    => __( 'Ort', 'slrg' ),
+                'label'    => __( 'Ort', 'slrg-sss-nautilus' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_location',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( '0000 Ort', 'slrg' ),
+					'placeholder' => __( '0000 Ort', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -400,12 +417,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_email',
             array(
-                'label'    => __( 'E-Mail-Adresse', 'slrg' ),
+                'label'    => __( 'E-Mail-Adresse', 'slrg-sss-nautilus' ),
                 'section'  => 'adress_text',
                 'settings' => 'text_block_email',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( 'info@sektion.ch', 'slrg' ),
+					'placeholder' => __( 'info@sektion.ch', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -415,7 +432,7 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_impressum',
             array(
-                'label'    => __( 'Impressum URL', 'slrg' ),
+                'label'    => __( 'Impressum URL', 'slrg-sss-nautilus' ),
                 'section'  => 'impressum_text',
                 'settings' => 'text_block_impressum',
                 'type'     => 'text'
@@ -427,12 +444,12 @@ function slrg_register_theme_customizer( $wp_customize ) {
         $wp_customize,
         'text_block_copyright',
             array(
-                'label'    => __( 'Copyright Text', 'slrg' ),
+                'label'    => __( 'Copyright Text', 'slrg-sss-nautilus' ),
                 'section'  => 'copyright_text',
                 'settings' => 'text_block_copyright',
                 'type'     => 'text',
 				'input_attrs' => array(
-					'placeholder' => __( '© 2021 SLRG Sektion XX', 'slrg' ),
+					'placeholder' => __( '© 2021 SLRG Sektion XX', 'slrg-sss-nautilus' ),
 				)
             )
         )
@@ -463,7 +480,7 @@ function slrg_add_custom_box() {
     foreach ( $screens as $screen ) {
         add_meta_box(
             'slrg_box_id', 
-            'Seiten Header Optionen',
+            'Header',
             'slrg_custom_box_html',
             $screen,
 			'side',
@@ -477,11 +494,12 @@ add_action( 'add_meta_boxes', 'slrg_add_custom_box' );
 function slrg_custom_box_html( $post ) {
     $value = get_post_meta( $post->ID, '_slrg_meta_key', true );
     ?>
-    <label for="slrg_field"><?php print( __( 'Gewünschter Header anzeigen', 'slrg' )); ?></label>
+    <label for="slrg_field"><?php print( __( 'Gewünschter Header anzeigen', 'slrg-sss-nautilus' )); ?></label>
     <select name="slrg_field" id="slrg_field" class="postbox" style="min-width: 150px; border: 1px solid #777; margin-top: 8px;">
-        <option value="1" <?php selected( $value, '1' ); ?>><?php print( __( 'Links anzeigen', 'slrg' )); ?></option>
-        <option value="2" <?php selected( $value, '2' ); ?>><?php print( __( 'Zentriert mit Hintergrundbild', 'slrg' )); ?></option>
-		<option value="3" <?php selected( $value, '3' ); ?>><?php print( __( 'Nur Hintergrundbild', 'slrg' )); ?></option>
+        <option value="1" <?php selected( $value, '1' ); ?>><?php print( __( 'Titel links anzeigen', 'slrg-sss-nautilus' )); ?></option>
+        <option value="2" <?php selected( $value, '2' ); ?>><?php print( __( 'Titel zentriert mit Hintergrundbild', 'slrg-sss-nautilus' )); ?></option>
+		<option value="3" <?php selected( $value, '3' ); ?>><?php print( __( 'Nur Hintergrundbild', 'slrg-sss-nautilus' )); ?></option>
+		<option value="0" <?php selected( $value, '0' ); ?>><?php print( __( 'kein Header', 'slrg-sss-nautilus' )); ?></option>
     </select>
 	<style>
 		#slrg_box_id{

@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <?php $meta = get_post_meta( $post->ID, '_slrg_meta_key', true );
-	if($meta == 1 || $meta == ''){
+	if($meta == 1){
 		print("<div id=\"PageHeader01\"><h1 class='title'>");
 		the_title();
 		print("</h1></div>");
@@ -45,7 +45,7 @@ get_header(); ?>
 			<?php else : ?>
 				
 				<article class="post error">
-					<h1 class="404"><?php esc_html_e( 'Kein Inhalt vorhanden', 'slrg' ); ?></h1>
+					<h1 class="404"><?php esc_html_e( 'Kein Inhalt vorhanden', 'slrg-sss-nautilus' ); ?></h1>
 				</article>
 
 			<?php endif; ?>
