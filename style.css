@@ -231,9 +231,8 @@ input[type="submit"] {
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background-color: #375B9B;
-  opacity: 0.8;
-  color: #000;
+    background-color: #375B9B;
+    color: #fff;
 }
 
 html input[type="button"]:focus,
@@ -376,9 +375,8 @@ button a, .wp-block-button a, .wp-block-post-excerpt__more-text a{
 }
 
 button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover, .wp-block-post-excerpt__more-text:hover a{
-  background-color: #ececec;
-  opacity: 0.8;
-  color: #000;
+    background-color: #375B9B;
+    color: #fff;
 }
 
 
@@ -393,8 +391,8 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
 }
 
 #content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover{
-    opacity: 0.8;
-    color: #000;
+    background-color: #375B9B;
+    color: #fff;
 }
 
 
