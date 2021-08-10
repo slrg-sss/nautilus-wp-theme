@@ -534,14 +534,18 @@ address {
 }
 
 pre {
-  background: #eee;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.7em;
+  font-size: 0.8em;
   line-height: 1.5em;
-  margin: 1.6em;
-  padding: 1.6em;
   overflow: auto;
-  max-width: 100%;
+  padding-bottom: 1em;
+}
+
+.wp-block-code code {
+  background: #ececec;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 1.25em;
 }
 
 figcaption {
