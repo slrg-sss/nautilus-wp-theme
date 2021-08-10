@@ -5,20 +5,20 @@
 
 get_header(); ?>
 
-<?php $meta = get_post_meta( $post->ID, '_slrg_meta_key', true );
-	if($meta == 1){
+<?php $headerOption = get_post_meta( $post->ID, '_slrg-sss-nautilus_header-option', true );
+	if($headerOption == 1 || $headerOption == ''){ // explicit choice or fallback if nothing is set
 		print("<div id=\"PageHeader01\"><h1 class='title'>");
 		the_title();
 		print("</h1></div>");
 	};
-	if($meta == 2){
+	if($headerOption == 2){
 		$bg_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 		print("</main><div id=\"PageHeader02\" style=\"background-image: url('".$bg_url."'\">
 		<div id=\"PageHeaderOverlay\"></div><h1 class='title'>");
 		the_title();
 		print("</h1></div><main class=\"main-fluid\">");
 	};
-	if($meta == 3){
+	if($headerOption == 3){
 		$bg_url = get_the_post_thumbnail_url(get_the_ID(),'full'); 
 		print("</main><div id=\"PageHeader03\" style=\"background-image: url('".$bg_url."'\">
 		</div><main class=\"main-fluid\">");
