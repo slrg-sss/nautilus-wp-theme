@@ -2020,7 +2020,7 @@ html[xmlns] .clearfix {
   }
 
   .sidebarLeft {
-    width: calc(100% - 0);
+    width: 100%;
     float: left;
     padding-bottom: 20px;
     padding-right: 0;
@@ -2028,7 +2028,7 @@ html[xmlns] .clearfix {
   }
 
   .sidebarRight {
-    width: calc(100% - 0);
+    width: 100%;
     float: left;
     padding-bottom: 20px;
   }
@@ -2100,7 +2100,7 @@ html[xmlns] .clearfix {
 
   .search .content ul li {
     margin-top: 30px;
-    width: calc(100% - 0);
+    width: 100%;
     padding-right: 0;
     min-height: 200px;
   }
