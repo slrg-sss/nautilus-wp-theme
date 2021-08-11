@@ -14,6 +14,7 @@ services:
     volumes:
       - "./wp:/var/www/html" # must match definition in wpdev-wp
     environment:
+      HOME: /tmp # needed since user changed to 30:30
       WORDPRESS_DB_HOST: wpdev-db:3306
       WORDPRESS_DB_USER: wp-slrg-user
       WORDPRESS_DB_PASSWORD: wp-slrg-user-password
