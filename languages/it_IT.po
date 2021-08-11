@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLRG/SSS Theme\n"
-"POT-Creation-Date: 2021-08-11 11:22+0200\n"
-"PO-Revision-Date: 2021-08-11 11:26+0200\n"
+"POT-Creation-Date: 2021-08-11 22:25+0200\n"
+"PO-Revision-Date: 2021-08-11 22:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -51,7 +51,7 @@ msgstr "Categoria"
 msgid "Kategorien"
 msgstr "Categorie"
 
-#: category.php:54 index.php:50 search.php:26
+#: category.php:54 index.php:50 search.php:33
 msgid "weiterlesen"
 msgstr "continua a leggere"
 
@@ -277,33 +277,20 @@ msgstr "Nessun contenuto disponibile"
 msgid "Suchresultate"
 msgstr "Risultati della ricerca"
 
-#: search.php:10
-msgid "Es wurden"
-msgstr "Ci sono stati"
+#: search.php:12
+#, php-format
+msgid "Es wurde %d Resultat zum Stichwort «%s» gefunden."
+msgid_plural "Es wurden %d Resultate zum Stichwort «%s» gefunden."
+msgstr[0] "Ce ne stato %d risultato per la parola chiave «%s»."
+msgstr[1] "Ci sono stati %d risultati per la parola chiave «%s»."
 
-#: search.php:10
-msgid "Resultate zum Stichwort «"
-msgstr "Risultati per la parola chiave «"
-
-#: search.php:10
-msgid "» gefunden."
-msgstr "» trovato."
-
-#: search.php:40
+#: search.php:47
 msgid "Nicht das gefunden, nach dem du gesucht hast?"
 msgstr "Non hai trovato quello che stavi cercando?"
 
-#: search.php:41
+#: search.php:48
 msgid "Nochmals suchen..."
 msgstr "Rinnovare la ricerca.."
-
-#: sidebar.php:3
-msgid "Archives"
-msgstr "Archivio"
-
-#: sidebar.php:10
-msgid "Meta"
-msgstr "Meta"
 
 #. Theme Name of the plugin/theme
 msgid "SLRG/SSS Nautilus"

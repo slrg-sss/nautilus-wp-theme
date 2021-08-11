@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLRG/SSS Theme\n"
-"POT-Creation-Date: 2021-08-11 11:21+0200\n"
-"PO-Revision-Date: 2021-08-11 11:27+0200\n"
+"POT-Creation-Date: 2021-08-11 22:25+0200\n"
+"PO-Revision-Date: 2021-08-11 22:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -53,7 +53,7 @@ msgstr "Catégorie"
 msgid "Kategorien"
 msgstr "Catégories"
 
-#: category.php:54 index.php:50 search.php:26
+#: category.php:54 index.php:50 search.php:33
 msgid "weiterlesen"
 msgstr "plus d’infos"
 
@@ -279,33 +279,20 @@ msgstr "Aucun contenu disponible"
 msgid "Suchresultate"
 msgstr "Résultats de la recherche"
 
-#: search.php:10
-msgid "Es wurden"
-msgstr "Il y a eu"
+#: search.php:12
+#, php-format
+msgid "Es wurde %d Resultat zum Stichwort «%s» gefunden."
+msgid_plural "Es wurden %d Resultate zum Stichwort «%s» gefunden."
+msgstr[0] "Il y a eu %d résultat trouvé pour le mot clé «%s»."
+msgstr[1] "Il y a eu %d résultats trouvés pour le mot clé «%s»."
 
-#: search.php:10
-msgid "Resultate zum Stichwort «"
-msgstr "Résultats trouvés pour le mot clé «"
-
-#: search.php:10
-msgid "» gefunden."
-msgstr "» trouvé."
-
-#: search.php:40
+#: search.php:47
 msgid "Nicht das gefunden, nach dem du gesucht hast?"
 msgstr "Vous n’avez pas trouvé ce que vous cherchiez ?"
 
-#: search.php:41
+#: search.php:48
 msgid "Nochmals suchen..."
 msgstr "Cherchez de nouveau…"
-
-#: sidebar.php:3
-msgid "Archives"
-msgstr "Archive"
-
-#: sidebar.php:10
-msgid "Meta"
-msgstr "Meta"
 
 #. Theme Name of the plugin/theme
 msgid "SLRG/SSS Nautilus"
