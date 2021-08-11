@@ -1,0 +1,45 @@
+name: Create/Update Release
+
+on:
+  # run only manually
+  workflow_dispatch:
+    # ask for the version to make sure it matches
+    inputs:
+      version:
+        description: 'Version (e.g. 1.0.0)'
+        required: true
+
+jobs:
+
+  do-release:
+    runs-on: ubuntu-latest
+    steps:
+ 
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get version 
+        id: get-version
+        run: echo ::set-output name=version::$(./dev/get-version.sh)
+
+      - name: Check version
+        id: check-version
+        if: steps.get-version.outputs.version != github.event.inputs.version
+        run: |
+          echo "::error::Versions do not match"
+          exit 1
+
+      - name: Build ZIP
+        id: build-zip
+        run: ./dev/build-zip.sh
+ 
+      - name: Draft release
+        id: draft-release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: v${{ github.event.inputs.version }}
+          tag_name: v${{ github.event.inputs.version }}
+          target_commitish: ${{ github.sha }}
+          draft: true
+          fail_on_unmatched_files: true
+          files: ./dist/slrg-sss-nautilus.zip
