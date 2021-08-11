@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLRG/SSS Theme\n"
-"POT-Creation-Date: 2021-08-04 17:10+0200\n"
-"PO-Revision-Date: 2021-08-04 17:13+0200\n"
+"POT-Creation-Date: 2021-08-11 10:32+0200\n"
+"PO-Revision-Date: 2021-08-11 10:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -29,219 +29,243 @@ msgstr "Page introuvable [404]"
 msgid ""
 "Es tut uns leid, aber die von Ihnen angeforderte Seite konnte nicht gefunden "
 "werden!"
-msgstr "Nous sommes desolés, mais la page demandée n’a pas été trouvée!"
+msgstr ""
+"Nous sommes désolés, mais la page que vous avez demandée n’a pas pu être "
+"trouvée !"
 
-#: category.php:28 index.php:28 single.php:20
+#: category.php:32 index.php:28 single.php:24
 msgid "Jetzt kommentieren!"
-msgstr "Commentez maintenant !"
+msgstr "Commenter maintenant!"
 
-#: category.php:28 index.php:28 single.php:20
+#: category.php:32 index.php:28 single.php:24
 msgid "1 Kommentar"
 msgstr "1 commentaire"
 
-#: category.php:28 index.php:28 single.php:20
+#: category.php:32 index.php:28 single.php:24
 msgid "% Kommentare"
-msgstr "% Commentaires"
+msgstr "% de commentaires"
 
-#: category.php:38 index.php:38 single.php:30
+#: category.php:42 index.php:38 single.php:34
 msgid "Kategorie"
-msgstr ""
+msgstr "Catégorie"
 
-#: category.php:40 index.php:40 single.php:32
+#: category.php:44 index.php:40 single.php:36
 msgid "Kategorien"
-msgstr ""
+msgstr "Catégories"
 
-#: category.php:49 index.php:49 search.php:24
+#: category.php:54 index.php:50 search.php:26
 msgid "weiterlesen"
 msgstr "plus d’infos"
 
-#: category.php:65 index.php:65 page-sidebar.php:49 single.php:57
+#: category.php:71 index.php:67 page-sidebar.php:51 single.php:61
 msgid "Keine Mitteilung vorhanden"
-msgstr ""
+msgstr "Aucun message disponible"
 
 #: footer.php:13
 msgid "SLRG Logo ohne Titel"
-msgstr ""
+msgstr "Logo SSS sans texte"
 
 #: footer.php:68
 msgid "SLRG Schweiz"
-msgstr ""
+msgstr "SSS Suisse"
 
 #: footer.php:71
 msgid "Impressum"
 msgstr "Mentions légales"
 
-#: footer.php:74
-msgid "Organisation des SRK"
-msgstr ""
+#: footer.php:75
+msgid "Rettungsorganisation des SRK"
+msgstr "Organisation de sauvetage de membre de la CRS"
 
-#: functions.php:25
-msgid "Primary Menu"
+#: functions.php:23
+msgid "Hauptmenü"
 msgstr "Menu principal"
 
-#: functions.php:26
-msgid "Meta Menu"
-msgstr "Méta-menu"
+#: functions.php:24
+msgid "Meta-Navigation"
+msgstr "Méta-navigation"
 
-#: functions.php:45
-msgid "News Sidebar"
-msgstr "News Sidebar"
+#: functions.php:63
+msgid "Sidebar Beiträge"
+msgstr "Articles Barre latérale"
 
-#: functions.php:47
-msgid "Custom widget area for the News-Page"
-msgstr ""
+#: functions.php:65
+msgid ""
+"Bereich für Widgets in der Sidebar für die Beitragsseite sowie im "
+"Beitragsarchiv"
+msgstr "Widgets dans l’articles barre latérale"
 
-#: functions.php:80
+#: functions.php:111
 msgid "Schwarz"
 msgstr "Noir"
 
-#: functions.php:85
+#: functions.php:116
 msgid "SLRG Blau"
-msgstr "SLRG Bleu"
+msgstr "SSS Bleu"
 
-#: functions.php:90
+#: functions.php:121
 msgid "SLRG Rot"
-msgstr "SLRG Rouge"
+msgstr "SSS Rouge"
 
-#: functions.php:95
+#: functions.php:126
 msgid "BG Schwarz"
 msgstr "BG Noir"
 
-#: functions.php:100
+#: functions.php:131
 msgid "SLRG BG Blau"
-msgstr "SLRG BG Bleu"
+msgstr "SSS BG Bleu"
 
-#: functions.php:105
+#: functions.php:136
 msgid "SLRG BG Rot"
-msgstr "SLRG BG Rouge"
+msgstr "SSS BG Rouge"
 
-#: functions.php:125
+#: functions.php:157
 msgid "Footer"
-msgstr "Pied de page"
+msgstr "Footer"
 
-#: functions.php:126
+#: functions.php:158
 msgid "Adresse & Links der Sektionen"
-msgstr "Adresse & liens des sections"
+msgstr "Adresses & liens des Sections"
 
-#: functions.php:130
+#: functions.php:162
 msgid "Adresse"
 msgstr "Adresse"
 
-#: functions.php:136
+#: functions.php:168
 msgid "Socialmedia Links"
 msgstr "Liens sociaux"
 
-#: functions.php:142
+#: functions.php:174
 msgid "Impressum Link"
 msgstr "Impressum Lien"
 
-#: functions.php:148
+#: functions.php:180
 msgid "Copyright"
 msgstr "Copyright"
 
-#: functions.php:217
+#: functions.php:249
 msgid "Social-Media-Plattform 01"
 msgstr "Plate-forme de média social 01"
 
-#: functions.php:222
+#: functions.php:254
 msgid "z.B. Facebook"
-msgstr "Facebook"
+msgstr "p.ex. Facebook"
 
-#: functions.php:236
+#: functions.php:268
 msgid "https://www.facebook.com/..."
 msgstr "https://www.facebook.com/..."
 
-#: functions.php:246
+#: functions.php:278
 msgid "Social-Media-Plattform 02"
 msgstr "Plate-forme de média social 02"
 
-#: functions.php:251
+#: functions.php:283
 msgid "z.B. Instagram"
-msgstr "Instagram"
+msgstr "p.ex. Instagram"
 
-#: functions.php:265
+#: functions.php:297
 msgid "https://www.instagram.com/..."
 msgstr "https: //www.instagram.com / …"
 
-#: functions.php:275
+#: functions.php:307
 msgid "Social-Media-Plattform 03"
 msgstr "Plate-forme de média social 03"
 
-#: functions.php:280
+#: functions.php:312
 msgid "z.B. Youtube"
-msgstr "Youtube"
+msgstr "p.ex. Youtube"
 
-#: functions.php:294
+#: functions.php:326
 msgid "https://www.youtube.com/..."
 msgstr "https://www.youtube.com/..."
 
-#: functions.php:304
+#: functions.php:336
 msgid "Social-Media-Plattform 04"
 msgstr "Plate-forme de média social 03"
 
-#: functions.php:309
+#: functions.php:341
 msgid "z.B. Tiktok"
-msgstr "Tiktok"
+msgstr "p.ex. Tiktok"
 
-#: functions.php:323
+#: functions.php:355
 msgid "https://www.tiktok.com/..."
 msgstr "https://www.tiktok.com/..."
 
-#: functions.php:333
+#: functions.php:365
 msgid "Sektion"
 msgstr "Section"
 
-#: functions.php:338
+#: functions.php:370
 msgid "SLRG Sektion XX"
-msgstr "SLRG Section XX"
+msgstr "SSS Section XX"
 
-#: functions.php:348 functions.php:353
+#: functions.php:380 functions.php:385
 msgid "Strasse"
 msgstr "Rue"
 
-#: functions.php:363 functions.php:368
+#: functions.php:395 functions.php:400
 msgid "Strasse 2"
 msgstr "Rue 2"
 
-#: functions.php:378
+#: functions.php:410
 msgid "Ort"
 msgstr "Lieu"
 
-#: functions.php:383
+#: functions.php:415
 msgid "0000 Ort"
-msgstr "0000 Lieu"
+msgstr "0000 Localité"
 
-#: functions.php:393
+#: functions.php:425
 msgid "E-Mail-Adresse"
 msgstr "Adresse e-mail"
 
-#: functions.php:398
-msgid "info@sektion.ch"
-msgstr "info@sektion.ch"
+#: functions.php:430
+msgid "info@example.com"
+msgstr "info@example.com"
 
-#: functions.php:408
+#: functions.php:440
 msgid "Impressum URL"
 msgstr "Impressum URL"
 
-#: functions.php:420
+#: functions.php:452
 msgid "Copyright Text"
-msgstr "Texte de copyright"
+msgstr "Texte Copyright"
 
-#: functions.php:425
+#: functions.php:457
 msgid "© 2021 SLRG Sektion XX"
-msgstr "© 2021 SLRG Section XX"
+msgstr "© 2021 Section SSS XX"
 
-#: header.php:50
+#: functions.php:504
+msgid "Headerbereich"
+msgstr "Zone d’en-tête"
+
+#: functions.php:506
+msgid "Titel links (Standard)"
+msgstr "Titre à gauche (Standard)"
+
+#: functions.php:507
+msgid "Titel mit Hintergrundbild"
+msgstr "Titre avec image de fond"
+
+#: functions.php:508
+msgid "Nur Bild"
+msgstr "Que l’image"
+
+#: functions.php:509
+msgid "Kein Header"
+msgstr "Aucun en-tête"
+
+#: header.php:46
 msgid "SLRG SSS Ihre Rettungsschwimmer"
-msgstr ""
+msgstr "SLRG SSS Vos nageurs sauveteurs"
 
-#: header.php:58
+#: header.php:54
 msgid "Menu"
 msgstr "Menu"
 
-#: page-home.php:33 page.php:48
+#: page.php:48
 msgid "Kein Inhalt vorhanden"
-msgstr ""
+msgstr "Aucun contenu disponible"
 
 #: search.php:9
 msgid "Suchresultate"
@@ -249,7 +273,7 @@ msgstr "Résultats de la recherche"
 
 #: search.php:10
 msgid "Es wurden"
-msgstr ""
+msgstr "Il y a eu"
 
 #: search.php:10
 msgid "Resultate zum Stichwort «"
@@ -257,51 +281,83 @@ msgstr "Résultats trouvés pour le mot clé «"
 
 #: search.php:10
 msgid "» gefunden."
-msgstr "»."
+msgstr "» trouvé."
 
-#: search.php:37
+#: search.php:40
 msgid "Nicht das gefunden, nach dem du gesucht hast?"
 msgstr "Vous n’avez pas trouvé ce que vous cherchiez ?"
 
-#: search.php:38
+#: search.php:41
 msgid "Nochmals suchen..."
 msgstr "Cherchez de nouveau…"
 
 #: sidebar.php:3
 msgid "Archives"
-msgstr "Archives"
+msgstr "Archive"
 
 #: sidebar.php:10
 msgid "Meta"
 msgstr "Meta"
 
 #. Theme Name of the plugin/theme
-msgid "SLRG/SSS Theme"
-msgstr "SLRG/SSS Theme"
+msgid "SLRG/SSS Nautilus"
+msgstr "SLRG/SSS Nautilus"
+
+#. Theme URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://wordpress.slrg.dev"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"A customized Theme for SLRG, Switzerland. Based on «Naked Wordpress» form J "
-"Beckman."
+"This is the SLRG/SSS Nautilus Theme for sections and regions of the Swiss "
+"Lifesaving Society"
 msgstr ""
-"Un thème personnalisé pour SLRG, Suisse. Basé sur le formulaire « Naked "
-"Wordpress » J Beckman."
 
 #. Author of the plugin/theme
-msgid "Reno Bertolotti, Pixelfarm"
-msgstr "Reno Bertolotti, Pixelfarm"
-
-#. Author URI of the plugin/theme
-msgid "https://pixelfarm.ch"
-msgstr "https://pixelfarm.ch"
+msgid "Reno Bertolotti (Pixelfarm GmbH) and the SLRG WordPress Team"
+msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "Sidebar"
 msgstr "Barre latérale"
 
-#. Template Name of the plugin/theme
-msgid "Home Page"
-msgstr "Page d'accueil"
+#~ msgid "info@sektion.ch"
+#~ msgstr "info@section.ch"
+
+#~ msgid "Gewünschter Header anzeigen"
+#~ msgstr "Afficher l’en-tête souhaité"
+
+#~ msgid "Primary Menu"
+#~ msgstr "Menu principal"
+
+#~ msgid "Meta Menu"
+#~ msgstr "Méta-menu"
+
+#~ msgid "News Sidebar"
+#~ msgstr "News Sidebar"
+
+#~ msgid "Custom widget area for the News-Page"
+#~ msgstr "Zone de widgets dans la barre latérale pour les contributions"
+
+#~ msgid "SLRG/SSS Theme"
+#~ msgstr "SLRG/SSS Theme"
+
+#~ msgid ""
+#~ "A customized Theme for SLRG, Switzerland. Based on «Naked Wordpress» form "
+#~ "J Beckman."
+#~ msgstr ""
+#~ "Un thème personnalisé pour SLRG, Suisse. Basé sur le formulaire « Naked "
+#~ "Wordpress » J Beckman."
+
+#~ msgid "Reno Bertolotti, Pixelfarm"
+#~ msgstr "Reno Bertolotti, Pixelfarm"
+
+#~ msgid "https://pixelfarm.ch"
+#~ msgstr "https://pixelfarm.ch"
+
+#~ msgid "Home Page"
+#~ msgstr "Page d'accueil"
 
 #~ msgid "Sprache"
 #~ msgstr "Langage"

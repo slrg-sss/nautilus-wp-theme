@@ -72,7 +72,7 @@ if ($actLang != "de" && $actLang != "fr" && $actLang != "it") {
       }
       ?>
       <p><img src="<?php echo get_template_directory_uri(); ?>/assets/images/SRK_Rettungsorganiation_<?php print($actLang); ?>.png"
-              alt="<?php echo(esc_html_e('Organisation des SRK', 'slrg-sss-nautilus')); ?>" id="SRK_Logo"></p>
+              alt="<?php echo(esc_html_e('Rettungsorganisation des SRK', 'slrg-sss-nautilus')); ?>" id="SRK_Logo"></p>
     </div>
   </div>
 </footer>
