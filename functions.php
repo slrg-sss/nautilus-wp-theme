@@ -52,7 +52,7 @@ function slrg_register_sidebars() {
   register_sidebar(array(
     'id' => 'sidebar',
     'name' => 'Sidebar',
-    'description' => 'Sidebar für alle Seiten ausser dem Beitragsarchiv und der Beitragsseite',
+    'description' => __('Sidebar für alle Seiten ausser dem Beitragsarchiv und der Beitragsseite', 'slrg-sss-nautilus'),
     'before_widget' => '<div>',
     'after_widget' => '</div>',
     'before_title' => '<h3 class="side-title">',

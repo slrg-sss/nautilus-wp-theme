@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SLRG/SSS Theme\n"
-"POT-Creation-Date: 2021-08-11 10:29+0200\n"
-"PO-Revision-Date: 2021-08-11 10:30+0200\n"
+"POT-Creation-Date: 2021-08-11 11:22+0200\n"
+"PO-Revision-Date: 2021-08-11 11:26+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -72,8 +72,6 @@ msgid "Impressum"
 msgstr "Sigla editoriale"
 
 #: footer.php:75
-#, fuzzy
-#| msgid "Organisation des SRK"
 msgid "Rettungsorganisation des SRK"
 msgstr "Organizzazione di salvataggio della CRS"
 
@@ -85,6 +83,12 @@ msgstr "Menu principale"
 msgid "Meta-Navigation"
 msgstr "Meta-navigazione"
 
+#: functions.php:55
+msgid "Sidebar für alle Seiten ausser dem Beitragsarchiv und der Beitragsseite"
+msgstr ""
+"Zona widget nella barra laterale per tutte le pagine tranne l’archivio delle "
+"pubblicazioni e la pagina articoli"
+
 #: functions.php:63
 msgid "Sidebar Beiträge"
 msgstr "Articoli barra laterale"
@@ -93,7 +97,9 @@ msgstr "Articoli barra laterale"
 msgid ""
 "Bereich für Widgets in der Sidebar für die Beitragsseite sowie im "
 "Beitragsarchiv"
-msgstr "Zona widget nella articoli barra laterale"
+msgstr ""
+"Zona widget nella barra laterale per la pagina articoli e negli archivi "
+"delle pubblicazioni"
 
 #: functions.php:111
 msgid "Schwarz"
@@ -301,74 +307,25 @@ msgstr "Meta"
 
 #. Theme Name of the plugin/theme
 msgid "SLRG/SSS Nautilus"
-msgstr ""
+msgstr "SLRG/SSS Nautilus"
 
 #. Theme URI of the plugin/theme
 #. Author URI of the plugin/theme
 msgid "https://wordpress.slrg.dev"
-msgstr ""
+msgstr "https://wordpress.slrg.dev"
 
 #. Description of the plugin/theme
 msgid ""
 "This is the SLRG/SSS Nautilus Theme for sections and regions of the Swiss "
 "Lifesaving Society"
 msgstr ""
+"This is the SLRG/SSS Nautilus Theme for sections and regions of the Swiss "
+"Lifesaving Society"
 
 #. Author of the plugin/theme
 msgid "Reno Bertolotti (Pixelfarm GmbH) and the SLRG WordPress Team"
-msgstr ""
+msgstr "Reno Bertolotti (Pixelfarm GmbH) and the SLRG WordPress Team"
 
 #. Template Name of the plugin/theme
 msgid "Sidebar"
 msgstr "Barra laterale"
-
-#~ msgid "info@sektion.ch"
-#~ msgstr "info@sezione.ch"
-
-#~ msgid "Gewünschter Header anzeigen"
-#~ msgstr "Mostra l’intestazione desiderata"
-
-#~ msgid "Primary Menu"
-#~ msgstr "Menu principale"
-
-#~ msgid "Meta Menu"
-#~ msgstr "Meta-navigazione"
-
-#~ msgid "News Sidebar"
-#~ msgstr "News Sidebar"
-
-#~ msgid "SLRG/SSS Theme"
-#~ msgstr "SLRG/SSS Theme"
-
-#~ msgid "Reno Bertolotti, Pixelfarm"
-#~ msgstr "Reno Bertolotti, Pixelfarm"
-
-#~ msgid "https://pixelfarm.ch"
-#~ msgstr "https://pixelfarm.ch"
-
-#~ msgid "Home Page"
-#~ msgstr "Pagina iniziale"
-
-#~ msgid "Sprache"
-#~ msgstr "Lingua"
-
-#~ msgid "Wähle die Sprache deiner Sektionen"
-#~ msgstr "Scegli la lingua delle tue sezioni"
-
-#~ msgid "Sprache wählen"
-#~ msgstr "Seleziona lingua"
-
-#~ msgid "Wähle die Sprache:"
-#~ msgstr "Selezionare la lingua:"
-
-#~ msgid "Deutsch"
-#~ msgstr "Tedesco"
-
-#~ msgid "Français"
-#~ msgstr "Francese"
-
-#~ msgid "Italiano"
-#~ msgstr "Italiano"
-
-#~ msgid "Komentar"
-#~ msgstr "Commento"
