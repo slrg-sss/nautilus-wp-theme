@@ -52,7 +52,7 @@ function slrg_register_sidebars() {
   register_sidebar(array(
     'id' => 'sidebar',
     'name' => 'Sidebar',
-    'description' => 'Take it on the side...',
+    'description' => __('Sidebar für alle Seiten ausser dem Beitragsarchiv und der Beitragsseite', 'slrg-sss-nautilus'),
     'before_widget' => '<div>',
     'after_widget' => '</div>',
     'before_title' => '<h3 class="side-title">',
@@ -62,7 +62,7 @@ function slrg_register_sidebars() {
   register_sidebar(array(
     'name' => __('Sidebar Beiträge', 'slrg-sss-nautilus'),
     'id' => 'sidebar-custom-header',
-    'description' => __('Bereich für Widget in der Sidebar für Beiträge', 'slrg-sss-nautilus'),
+    'description' => __('Bereich für Widgets in der Sidebar für die Beitragsseite sowie im Beitragsarchiv', 'slrg-sss-nautilus'),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h3 class="widget-title">',
@@ -427,7 +427,7 @@ function slrg_register_theme_customizer($wp_customize) {
         'settings' => 'text_block_email',
         'type' => 'text',
         'input_attrs' => array(
-          'placeholder' => __('info@sektion.ch', 'slrg-sss-nautilus'),
+          'placeholder' => __('info@example.com', 'slrg-sss-nautilus'),
         )
       )
     )
@@ -501,7 +501,7 @@ add_action('add_meta_boxes', 'slrg_add_custom_box');
 function slrg_custom_box_html($post) {
   $value = get_post_meta($post->ID, '_slrg-sss-nautilus_header-option', true);
   ?>
-  <label for="slrg-sss-nautilus_header_option"><?php print(__('Gewünschter Header anzeigen', 'slrg-sss-nautilus')); ?></label>
+  <label for="slrg-sss-nautilus_header_option"><?php print(__('Headerbereich', 'slrg-sss-nautilus')); ?></label>
   <select name="slrg-sss-nautilus_header_option" id="slrg-sss-nautilus_header_option" class="postbox" style="min-width: 150px; border: 1px solid #777; margin-top: 8px;">
     <option value="1" <?php selected($value, '1'); ?>><?php print(__('Titel links (Standard)', 'slrg-sss-nautilus')); ?></option>
     <option value="2" <?php selected($value, '2'); ?>><?php print(__('Titel mit Hintergrundbild', 'slrg-sss-nautilus')); ?></option>

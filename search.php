@@ -7,7 +7,7 @@ global $wp_query;
     <div class="content">
       <div class="search-header">
         <h1 class="search-title"><?php esc_html_e('Suchresultate', 'slrg-sss-nautilus'); ?></h1>
-        <p><?php esc_html_e('Es wurden', 'slrg-sss-nautilus'); ?><?php echo $wp_query->found_posts; ?><?php esc_html_e('Resultate zum Stichwort «', 'slrg-sss-nautilus'); ?><?php the_search_query(); ?><?php esc_html_e('» gefunden.', 'slrg-sss-nautilus'); ?></p>
+        <p><?php esc_html_e('Es wurden', 'slrg-sss-nautilus'); ?> <?php echo $wp_query->found_posts; ?> <?php esc_html_e('Resultate zum Stichwort «', 'slrg-sss-nautilus'); ?><?php the_search_query(); ?><?php esc_html_e('» gefunden.', 'slrg-sss-nautilus'); ?></p>
       </div>
 
       <?php if (have_posts()) { ?>

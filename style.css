@@ -4,7 +4,7 @@ Theme URI: https://wordpress.slrg.dev
 Author: Reno Bertolotti (Pixelfarm GmbH) and the SLRG WordPress Team
 Author URI: https://wordpress.slrg.dev
 Description: This is the SLRG/SSS Nautilus Theme for sections and regions of the Swiss Lifesaving Society
-Version: 0.0.6
+Version: 1.0.0
 Requires at least: 5.7
 Text Domain: slrg-sss-nautilus
 Requires PHP: 7.3
@@ -280,9 +280,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 #sidebar .wp-block-search .wp-block-search__button {
-  margin-left: 0 !important;
+  background-color: #ececec;
+  border: none;
+  margin-left: 0;
 }
-
+#sidebar .wp-block-search .wp-block-search__button:hover {
+    background-color: #375B9B;
+    color: #fff;
+}
 /**/
 
 
@@ -468,11 +473,11 @@ p {
   font-size: 17px;
   font-weight: 400;
   line-height: 1.5em;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
   padding-bottom: 0.5em;
+ /* word-wrap: break-word;*/
+ /* -webkit-hyphens: auto;*/
+ /* -ms-hyphens: auto;*/
+ /* hyphens: auto;*/
 }
 
 ul,
@@ -997,6 +1002,23 @@ article ul li:before {
   content: "– ";
   margin-left: -16px;
   margin-right: 2px;
+}
+/*WP latest Posts*/
+article ul.wp-block-latest-posts__list li::before {
+  content: "";
+  margin-left: 0;
+  margin-right: 0;
+}
+article ul.wp-block-latest-posts__list {
+  margin-left: 0;
+}
+article ul.wp-block-latest-posts__list a {
+  font-weight: 100;
+  color: #000;
+  padding-bottom: 5px;
+  line-height: 24px;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .blocks-gallery-grid li:before {
