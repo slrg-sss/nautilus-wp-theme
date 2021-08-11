@@ -16,6 +16,6 @@ It is also possible to use GitHub directly for...
 
 ### Contributing and further development
 
-This theme was initially created by [Pixelfarm](https://www.pixelfarm.ch) based on the *«Naked Wordpress» Theme by J. Beckman*. Further development and maintenance is carried out independently by a **
-team of volunteers** of the Swiss Lifesaving Society. New contributors with a background in web-design or web-development are very welcome to actively participate in the discussions and propose
+This theme was initially created by [Pixelfarm](https://www.pixelfarm.ch) based on the *«Naked Wordpress» Theme by J. Beckman*. Further development and maintenance is carried out independently by a
+**team of volunteers** of the Swiss Lifesaving Society. New contributors with a background in web-design or web-development are very welcome to actively participate in the discussions and propose
 changes changes via pull requests. Please have a look at the [contribution guidelines](CONTRIBUTING.md).
