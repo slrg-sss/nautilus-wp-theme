@@ -107,7 +107,7 @@ figure,
 figcaption,
 footer,
 header,
-hgroup,
+h,
 menu,
 nav,
 output,
@@ -2112,4 +2112,8 @@ html[xmlns] .clearfix {
     float: left;
   }
 
+}
+
+.has-background .wp-block-group__inner-container {
+  padding: 15px;
 }
