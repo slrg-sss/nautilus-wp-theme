@@ -398,11 +398,24 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
   padding: 8px 15px;
   border-radius: 0;
   color: #000;
+  border: 2px solid transparent;
 }
 
 #content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover {
   background-color: var(--slrg-blue-color);
   color: #fff;
+}
+
+#content .is-style-outline .wp-block-button__link{
+	border: 2px solid #000;
+}
+
+#content .is-style-outline .wp-block-button__link.has-slrg-rot-color{
+	border: 2px solid var(--slrg-red-color);
+}
+
+#content .is-style-outline .wp-block-button__link.has-slrg-blau-color{
+	border: 2px solid var(--slrg-blue-color);
 }
 
 /* Typography
@@ -1920,6 +1933,43 @@ html[xmlns] .clearfix {
 
   #nav-toggle {
     display: block;
+  }
+
+  #PageHeader02 {
+    height: 25vw;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  #PageHeaderOverlay {
+    width: 100%;
+    height: 25vw;
+    background-color: var(--slrg-blue-color);
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+
+  #PageHeader02 h1 {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: calc(50% - 25vw - 25px);
+    z-index: 2;
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  #PageHeader03 {
+    height: 25vw;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    background-position: center center;
+    background-size: cover;
   }
 
 }
