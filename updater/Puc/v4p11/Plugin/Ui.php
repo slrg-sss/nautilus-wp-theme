@@ -51,7 +51,7 @@ if ( !class_exists('Puc_v4p11_Plugin_Ui', false) ):
 		 */
 		public function addViewDetailsLink($pluginMeta, $pluginFile, $pluginData = array()) {
 			if ( $this->isMyPluginFile($pluginFile) && !isset($pluginData['slug']) ) {
-				$linkText = apply_filters($this->updateChecker->getUniqueName('view_details_link'), __('View details'));
+				$linkText = apply_filters($this->updateChecker->getUniqueName('view_details_link'), __('View details', 'plugin-update-checker'));
 				if ( !empty($linkText) ) {
 					$viewDetailsLinkPosition = 'append';
 
@@ -74,7 +74,7 @@ if ( !class_exists('Puc_v4p11_Plugin_Ui', false) ):
 					$viewDetailsLink = sprintf('<a href="%s" class="thickbox open-plugin-details-modal" aria-label="%s" data-title="%s">%s</a>',
 						esc_url(network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . urlencode($this->updateChecker->slug) .
 							'&TB_iframe=true&width=600&height=550')),
-						esc_attr(sprintf(__('More information about %s'), $pluginData['Name'])),
+						esc_attr(sprintf(__('More information about %s', 'plugin-update-checker'), $pluginData['Name'])),
 						esc_attr($pluginData['Name']),
 						$linkText
 					);

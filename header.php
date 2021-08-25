@@ -11,16 +11,9 @@ if ($actLang != "de" && $actLang != "fr" && $actLang != "it") {
 <head>
   <meta charset="<?php bloginfo('charset'); ?>"/>
   <meta name="viewport" content="width=device-width"/>
-  <title>
-    <?php bloginfo('name'); ?> |
-    <?php is_front_page() ? bloginfo('description') : wp_title(''); ?>
-  </title>
-
   <link rel="profile" href="http://gmpg.org/xfn/11"/>
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
-
   <?php wp_head(); ?>
-
 </head>
 
 <body
@@ -37,15 +30,12 @@ if ($actLang != "de" && $actLang != "fr" && $actLang != "it") {
     <div id="brand">
       <?php
       if (function_exists('the_custom_logo')) {
-
         the_custom_logo();
-
         if (get_theme_mod('custom_logo')) {
 
         } else {
-          echo("<a href=\"" . esc_url(home_url('/')) . "\" title=\"" . esc_attr(get_bloginfo('name', 'display')) . "\" rel=\"home\"><img width=\"600\" height=\"180\" src=\"" . get_template_directory_uri() . "/assets/images/SLRG-Logo_" . $actLang . ".png\" class=\"custom-logo\" alt=\"" . __('SLRG SSS Ihre Rettungsschwimmer', 'slrg-sss-nautilus') . "\"></a>");
+          echo("<a href=\"" . esc_url(home_url('/')) . "\" title=\"" . esc_attr(get_bloginfo('name', 'display')) . "\" rel=\"home\"><img width=\"600\" height=\"180\" src=\"" . esc_url(get_template_directory_uri() . "/assets/images/SLRG-Logo_" . $actLang . ".png") . "\" class=\"custom-logo\" alt=\"" . esc_attr__('SLRG SSS Ihre Rettungsschwimmer', 'slrg-sss-nautilus') . "\"></a>");
         }
-
       }
       ?>
     </div>
@@ -58,7 +48,6 @@ if ($actLang != "de" && $actLang != "fr" && $actLang != "it") {
         </ul>
       </nav>
     </div>
-
 
   </div>
 </header>
