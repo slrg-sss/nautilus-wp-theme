@@ -684,44 +684,24 @@ a:active {
   background-color: var(--slrg-red-color);
 }
 
-#content .is-style-outline .has-slrg-blau-background-color {
-  background-color: var(--slrg-blue-color) !important;
-}
-
 #content .is-style-outline .has-slrg-blau-background-color:hover {
-  background-color: #000 !important;
+  background-color: #000;
 }
 
 #content .is-style-outline .has-slrg-rot-background-color:hover {
-  background-color: var(--slrg-blue-color) !important;
+  background-color: var(--slrg-blue-color);
 }
 
 #content .is-style-outline .has-slrg-schwarz-background-color:hover {
-  background-color: var(--slrg-blue-color) !important;
-}
-
-#content .is-style-outline .has-slrg-schwarz-color {
-  color: #000 !important;
-}
-
-#content .is-style-outline .has-slrg-schwarz-color:hover {
-  background-color: #fff !important;
-}
-
-#content .is-style-outline .has-slrg-blau-color {
-  color: var(--slrg-blue-color) !important;
+  background-color: var(--slrg-blue-color);
 }
 
 #content .is-style-outline .has-slrg-blau-color:hover {
-  background-color: #fff !important;
-}
-
-#content .is-style-outline .has-slrg-rot-color {
-  color: var(--slrg-red-color) !important;
+  color: var(--slrg-blue-color);
 }
 
 #content .is-style-outline .has-slrg-rot-color:hover {
-  background-color: #fff !important;
+  color: var(--slrg-red-color);
 }
 
 table {
