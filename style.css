@@ -400,6 +400,20 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
   color: #000;
 }
 
+#content .is-style-outline > .wp-block-button__link, #content .wp-block-button__link.is-style-outline {
+  padding: 6px 13px;
+}
+
+#content .is-style-outline > .wp-block-button__link:hover, #content .wp-block-button__link.is-style-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover {
+  background-color: var(--slrg-blue-color);
+  color: #fff;
+}
+
 #content .wp-block-button__link:hover, #content .wp-block-file__button:hover, .h-readmore .wp-block-button .wp-block-button__link:hover {
   background-color: var(--slrg-blue-color);
   color: #fff;
@@ -627,11 +641,11 @@ a:active {
 }
 
 #content .has-slrg-schwarz-color {
-  color: #191919;
+  color: #000;
 }
 
 #content .has-slrg-schwarz-background-color {
-  background-color: #191919;
+  background-color: #000;
 }
 
 #content .has-slrg-bg-blau-color {
@@ -650,6 +664,10 @@ a:active {
   background-color: var(--slrg-blue-color);
 }
 
+#content .has-slrg-blau-background-color:hover {
+  background-color: #000;
+}
+
 #content .has-slrg-bg-rot-color {
   color: var(--slrg-lightred-color);
 }
@@ -666,32 +684,24 @@ a:active {
   background-color: var(--slrg-red-color);
 }
 
-#content .is-style-fill .has-slrg-rot-color {
-  color: var(--slrg-red-color) !important;
-}
-
-#content .is-style-fill .has-slrg-rot-color:hover {
-  background-color: #000 !important;
-}
-
-#content .is-style-fill .has-slrg-blau-background-color {
-  background-color: var(--slrg-blue-color);
-}
-
-#content .is-style-outline .has-slrg-blau-background-color {
-  background-color: var(--slrg-blue-color);
-}
-
 #content .is-style-outline .has-slrg-blau-background-color:hover {
   background-color: #000;
 }
 
-#content .is-style-outline .has-slrg-rot-color {
-  color: var(--slrg-red-color);
+#content .is-style-outline .has-slrg-rot-background-color:hover {
+  background-color: var(--slrg-blue-color);
+}
+
+#content .is-style-outline .has-slrg-schwarz-background-color:hover {
+  background-color: var(--slrg-blue-color);
+}
+
+#content .is-style-outline .has-slrg-blau-color:hover {
+  color: var(--slrg-blue-color);
 }
 
 #content .is-style-outline .has-slrg-rot-color:hover {
-  background-color: #fff;
+  color: var(--slrg-red-color);
 }
 
 table {
@@ -1770,8 +1780,8 @@ html[xmlns] .clearfix {
     display: block !important;
     position: absolute;
     top: 0;
+    left: 0;
     right: 0;
-    width: 100%;
     background: transparent;
     border-bottom: 1px solid #e9e9e9;
     border-top: 1px solid #e9e9e9;
@@ -1809,16 +1819,14 @@ html[xmlns] .clearfix {
   }
 
   .main-navigation .nav-menu {
-    width: 100% !important;
     display: none;
-
     margin: 0;
     position: absolute;
     top: 128px;
+    left: 0;
     right: 0;
     -ms-transform: translateY(0%);
     transform: translateY(0%);
-
   }
 
   .nav-menu.nav-menu-mobile > li > a {
@@ -1920,6 +1928,43 @@ html[xmlns] .clearfix {
 
   #nav-toggle {
     display: block;
+  }
+
+  #PageHeader02 {
+    height: 25vw;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  #PageHeaderOverlay {
+    width: 100%;
+    height: 25vw;
+    background-color: var(--slrg-blue-color);
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+
+  #PageHeader02 h1 {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: calc(50% - 25vw - 25px);
+    z-index: 2;
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  #PageHeader03 {
+    height: 25vw;
+    margin-top: -35px;
+    margin-bottom: 35px;
+    background-position: center center;
+    background-size: cover;
   }
 
 }
