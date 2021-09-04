@@ -212,13 +212,17 @@ big {
   font-size: 125%;
 }
 
-button,
+
+
+
+,
 input {
   line-height: normal;
   overflow: hidden;
 }
 
-html input[type="button"],
+html input[type="button
+"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: none;
@@ -235,7 +239,7 @@ input[type="submit"] {
 
 }
 
-html input[type="button"]:hover,
+html input[type=""]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   background-color: var(--slrg-blue-color);
@@ -404,6 +408,9 @@ button :hover, .wp-block-button:hover a, .wp-block-post-excerpt__more-text:hover
   background-color: var(--slrg-blue-color);
   color: #fff;
 }
+
+
+
 
 /* Typography
 -------------------------------------------------------------- */
@@ -736,6 +743,7 @@ th {
 
 .has-background {
   margin-bottom: 0.7em;
+  padding: 0.3em;
 }
 
 #content .is-style-rounded img {
