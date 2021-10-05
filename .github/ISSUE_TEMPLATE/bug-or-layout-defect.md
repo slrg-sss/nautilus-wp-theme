@@ -25,8 +25,8 @@ If applicable, add screenshots to help explain your problem.
 
 **Operating system and browser:**
  - OS: [e.g. Windows, iOS, Linux]
- - Browser [e.g. Chrome, Safari, Edge]
- - Browser version [e.g. 22]
+ - Browser: [e.g. Chrome, Safari, Edge]
+ - Browser version: [e.g. 22]
 
 **Additional context**
 Add any other context about the problem here.
