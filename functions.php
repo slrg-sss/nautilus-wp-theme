@@ -58,18 +58,17 @@ function slrg_register_sidebars() {
     'id' => 'sidebar',
     'name' => 'Sidebar',
     'description' => __('Sidebar für alle Seiten ausser dem Beitragsarchiv und der Beitragsseite', 'slrg-sss-nautilus'),
-    'before_widget' => '<div>',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
-    'before_title' => '<h3 class="side-title">',
+    'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
-    'empty_title' => '',
   ));
   register_sidebar(array(
     'name' => __('Sidebar Beiträge', 'slrg-sss-nautilus'),
     'id' => 'sidebar-custom-header',
     'description' => __('Bereich für Widgets in der Sidebar für die Beitragsseite sowie im Beitragsarchiv', 'slrg-sss-nautilus'),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
   ));
