@@ -2051,11 +2051,11 @@ html[xmlns] .clearfix {
     flex-direction: row;
   }
 
-  .sidebarPage :nth-child(1) {
+  .sidebarPage > .sidebarLeft {
     order: 2;
   }
 
-  .sidebarPage :nth-child(2) {
+  .sidebarPage > .sidebarRight {
     order: 1;
   }
 
