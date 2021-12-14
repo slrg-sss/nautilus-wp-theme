@@ -46,6 +46,9 @@ function enqueue_theme_css_js() {
     array('jquery'),
     wp_get_theme()->get('Version')
   );
+
+  /* Make Dashicons available in the front-end */
+  wp_enqueue_style('dashicons');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_theme_css_js');
