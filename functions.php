@@ -80,6 +80,18 @@ function slrg_register_sidebars() {
 add_action('widgets_init', 'slrg_register_sidebars');
 
 /*-----------------------------------------------------------------------------------*/
+/* Add additional block styles
+/*-----------------------------------------------------------------------------------*/
+register_block_style(
+  'core/table',
+  array(
+    'name'       => 'no-lines',
+    'label'      => __('Ohne Linien', 'slrg-sss-nautilus'),
+    'is_default' => true
+  )
+);
+
+/*-----------------------------------------------------------------------------------*/
 /* Load translation
 /*-----------------------------------------------------------------------------------*/
 load_theme_textdomain('slrg-sss-nautilus', get_template_directory() . '/languages');

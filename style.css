@@ -740,6 +740,14 @@ th {
   border-bottom: 1px solid var(--slrg-gray-color);
 }
 
+.is-style-no-lines table {
+  border: 0;
+}
+
+.is-style-no-lines table > thead > tr > th {
+  border: 0;
+}
+
 .has-drop-cap {
   margin-top: 10px;
 }
