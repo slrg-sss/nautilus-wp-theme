@@ -1039,7 +1039,7 @@ article ul.wp-block-latest-posts__list {
   margin-left: 0;
 }
 
-article ul.wp-block-latest-posts__list a {
+article ul.wp-block-latest-posts__list a.wp-block-latest-posts__post-title {
   font-weight: 100;
   color: #000;
   padding-bottom: 5px;
